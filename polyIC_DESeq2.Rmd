@@ -1,0 +1,640 @@
+---
+title: "Dr.Shah NS5 and polyIC samples"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+__Author:__ Amanda Everitt  
+__Began:__ 8/12/2018  
+__Finished:__ TBD
+
+# [Methods]
+Raw data was processed using the Ion Torrent Suite Sever version 5.8.0 (Thermo Fisher). The coverageAnalysis plugin v5.8.0.8 was used to generate coverage and alignment quality information. Reads were aligned to the hg19_AmpliSeq_Transcriptome_v1.1 reference using default settings (tmap mapall -q 50000 -Y -u -o 2 stage1 map4). Gene expression was quantified with using the ampliSeqRNA plugin v5.8.0.3 with default settings. Genes with less than ten reads in more than 75% of the samples were removed. Filtered genes were normalized for sample library size before applying a principal component analysis (PCA) and hierarchical clustering to identify sample outliers. DESeq2 [cite] was used to identify differentially expressed genes (adj pval < 0.05); the script is included in supplementary information. Gene Ontology analysis was preformed using the goseq R-package [cite] using all expressed genes as a background. 
+
+Love, M.I., Huber, W., Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2 Genome Biology 15(12):550 (2014)  
+Young, M.D., Wakefield, M.J., Smyth, G.K., Oshlack, A., Gene ontology analysis for RNA-seq: accounting for selection bias, Genome Biology, 11, 2, Feb 2010, R14
+
+
+# [Experimental Design]
+- Test 1: GFP+polyIC vs GFP
+- Test 2: NS5+polyIC vs NS5
+
+# [Results at a Glance]
+- TBD
+
+\newpage
+
+## Step 1: Set-up
+```{r}
+knitr::opts_chunk$set(cache=TRUE, autodep=TRUE)
+knitr::opts_knit$set(root.dir = "~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/")
+#setwd("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/")
+
+New_image_directory = "/Users/AEveritt/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/"
+dir.create(New_image_directory, recursive = TRUE, showWarnings = FALSE)
+```
+
+## Step 2: Load counts
+```{r}
+suppressPackageStartupMessages(library(data.table))
+
+cts <- read.delim("raw_data/absolute_counts_Chip21.xls", sep = "\t")
+metadata <- read.delim("raw_data/Chip21_metadata.csv", sep = ",")
+#setdiff(as.vector(metadata21$IonCode), colnames(cts21))
+setnames(cts, old = as.vector(metadata$IonCode), new=as.vector(metadata$FullID))
+to_remove <- metadata[substr(metadata$FullID, 1, 3) == "ex1", "FullID"] #remove IFNB1 data
+metadata <- metadata[!metadata$FullID %in% to_remove,]
+cts <- cts[, !colnames(cts) %in% to_remove]
+```
+
+##Step 3: Remove lowly expressed genes 
+```{r}
+#Filter Data
+dont_include <- c("Gene","Target","COSMIC_CGC_FLAG","NCBI_NAME","HGNC_SYMBOL_ACC","MIM_MORBID_DESCRIPTION","ENTREZ_GENE_ID","U133PLUS2_PSID")
+dim(cts)
+cts <- cts[rowSums(cts[, !colnames(cts) %in% dont_include] > 10) >= 2,] #filter counts that have don't have at least 10 counts in 2 samples (#rep)
+dim(cts)
+#dim(cts[duplicated(cts$Gene), ]) #5 non-unique genes
+rownames(cts) = make.names(cts$Gene, unique=TRUE)
+rownames(metadata) = make.names(metadata$FullID)
+
+filtered_cts <- cts
+cts <- cts[, !colnames(cts) %in% dont_include] #Remove non-numeric columns
+```
+
+##Step 3: Normalization and outlier removal
+```{r}
+library(ggplot2)
+library(preprocessCore)
+
+#Distribution of Library Size
+cts.libsize <- colSums(cts)*1e-6
+barplot(t(as.data.frame(cts.libsize)), ylab="Library size (millions)", las=2)
+
+#Library Size normalization
+cpm <- apply(cts,2, function(x) (x/sum(x))*1000000)
+log.cpm <- log2(cpm + 1)
+
+#Quantile Normalization
+norm_counts <- normalize.quantiles(as.matrix(log.cpm), copy = TRUE)
+colnames(norm_counts) <- colnames(log.cpm)
+rownames(norm_counts) <- rownames(log.cpm)
+
+#PCA
+par(mfrow=c(1,1))
+pca <- prcomp(t(norm_counts))
+percentVar <- pca$sdev^2/sum(pca$sdev^2)
+d <- data.frame(PC1 = pca$x[, 1], PC2 = pca$x[, 2])
+e <- merge(d, metadata, all=TRUE, by="row.names")
+e$Rep <- as.factor(e$Rep)
+ggplot(data = e, aes_string(x = "PC1", y = "PC2", color = "ValidGene", shape="Rep")) +
+        geom_point(size=3) + 
+        xlab(paste0("PC1: ", round(percentVar[1] * 100), "% variance")) + 
+        ylab(paste0("PC2: ", round(percentVar[2] * 100), "% variance")) + 
+        coord_fixed() 
+```
+
+```{r}
+library(matrixStats)
+
+#DENDOGRAMS
+par(cex=0.8,mar = c(3,1,1,18))
+  #-------Base------#
+dend <- as.dendrogram(hclust(as.dist(1 - cor(((norm_counts)), use = "pa")),method = "complete"))
+plot(dend,horiz=TRUE, main="All Genes")
+
+#-------Top 50% expressed genes------#
+union.top.express <- list()
+for (i in colnames(norm_counts)){
+  tmp <- as.data.frame(norm_counts[, colnames(norm_counts) == i, drop=F])
+  colnames(tmp) <- "value"
+  to_use <- rownames(tmp[tmp$value > quantile(tmp$value,prob=50/100), , drop=F])
+  union.top.express <- union(union.top.express, to_use)
+}
+#length(union.top.express)
+
+df <- norm_counts[rownames(norm_counts) %in% as.vector(union.top.express),]
+dend <- as.dendrogram(hclust(as.dist(1 - cor((df), use = "pa")),method = "complete"))
+plot(dend,horiz=TRUE, main= "Top 50% expressing genes")
+
+#-------Top 50% variable genes------#
+a<- as.data.frame(norm_counts)
+a$var = as.vector(rowVars(norm_counts))
+top.var <- rownames(a[a$var > quantile(a$var,prob=50/100), , drop=F])
+df <- norm_counts[rownames(norm_counts) %in% as.vector(top.var),]
+dend <- as.dendrogram(hclust(as.dist(1 - cor((df), use = "pa")),method = "complete"))
+plot(dend,horiz=TRUE, main= "Top 50% variable genes")
+```
+
+## Initial thoughts:   
+  - Clean data, replicates cluster together and away from other treatments (lfcShrink should be fine here)
+  - No outliers 
+  - No confounding factors to account for in model matrix 
+
+```{r}
+#Save Data
+write.csv(filtered_cts, file=paste0(New_image_directory, "/count_matrix.csv"))
+write.csv(as.data.frame(norm_counts), file=paste0(New_image_directory, "/norm_counts.csv"))
+write.csv(metadata, file=paste0(New_image_directory, "/experimental_design.csv"))
+```
+
+\newpage
+# Step 4: DESeq2
+- Test 1: GFP+polyIC vs GFP
+- Test 2: NS5+polyIC vs NS5
+
+```{r results='hide', message=FALSE, warning=FALSE}
+suppressPackageStartupMessages(library(DESeq2))
+results_list <- list()
+
+#Make model matrix. No confounding factors to control for here
+experimental.design <- metadata[order(match(rownames(metadata), colnames(cts))),] 
+
+#Test 1
+experimental.design$ValidGene <- relevel(experimental.design$ValidGene, ref = "GFP")
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = experimental.design, design= ~ValidGene)
+dds <- DESeq(dds)
+results_list[["GFP+polyIC_vs_GFP"]] <- lfcShrink(dds, coef="ValidGene_GFP_polyIC_vs_GFP", type="apeglm")
+
+#Test 2
+experimental.design$ValidGene <- relevel(experimental.design$ValidGene, ref = "NS5")
+dds <- DESeqDataSetFromMatrix(countData = cts, colData = experimental.design, design= ~ValidGene)
+dds <- DESeq(dds)
+results_list[["NS5+polyIC_vs_NS5"]] <- lfcShrink(dds, coef="ValidGene_NS5_polyIC_vs_NS5", type="apeglm")
+```
+
+```{r}
+##PCA
+plotDispEsts(dds)
+vsd <- vst(dds)
+
+pcaData <- plotPCA(vsd, intgroup=c("ValidGene","Rep"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+pcaData$Rep <- as.factor(pcaData$Rep)
+ggplot(pcaData, aes(PC1, PC2, color=ValidGene, shape=Rep)) +
+    geom_point(size=3) +
+    xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+    ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+    coord_fixed()
+```
+
+```{r}
+#par(mfrow=c(1,2))
+drawLines <- function() abline(h=c(-.5,.5),col="dodgerblue",lwd=2)
+
+for (i in names(results_list))
+  { DESeq2::plotMA(results_list[[i]], main = i,xlim=c(1,1e5), ylim=c(-3,3)); drawLines() }
+```
+
+# Step 5: Output Significant Results
+```{r, include=F}
+#Functions
+quick_output <- function(mydf, name, filtered_cts){
+  mydf$mim_morbid_descrip <- filtered_cts[rownames(filtered_cts) %in% rownames(mydf), c("MIM_MORBID_DESCRIPTION")]
+  mydf$ncbi_name <- filtered_cts[rownames(filtered_cts) %in% rownames(mydf), c("NCBI_NAME")]
+  
+  cat(paste(name,"\n", nrow(mydf), "total\n"))
+  df_sig <- subset(mydf, (!is.na(mydf$padj)) & (mydf$padj < 0.05))
+  cat(paste(nrow(df_sig), "have adj pval < 0.05\n"))
+  df_sigHC <- df_sig[abs(df_sig$log2FoldChange) > 1,]
+  cat(paste(nrow(df_sigHC), "have abs(logFC) > 1\n"))
+  
+  #retrieve gene symbols for the data
+  write.table(mydf, paste0(New_image_directory, "results_", name,".csv"), sep=",", col.names = NA)
+  write.table(df_sig, paste0(New_image_directory, "DEX_", name,".csv"), sep=",", col.names = NA)
+  write.table(df_sigHC, paste0(New_image_directory, "hcDEX_", name,".csv"), sep=",", col.names = NA)
+  return (df_sig)
+}
+
+run_GOpathway_analysis<-function(DEgenes,backgroundGenes,genomeBuild,geneIdentifier,cutoff,outputFileFullPath){ # GO pathway over-representation analysis
+  suppressPackageStartupMessages(library(goseq)) #load here because collides with dplyr
+  suppressPackageStartupMessages(library(GO.db))
+  genes <- as.integer(backgroundGenes %in% DEgenes) # make vector-contains all genes (1 for DEX, 0 for not)
+  names(genes) <- (backgroundGenes)
+  
+  pwf=nullp(genes,genomeBuild,geneIdentifier) #obtain a weighting for each gene, depending on its length
+  GO.wall=goseq(pwf,genomeBuild,geneIdentifier)
+  enriched.GO <- GO.wall[p.adjust(GO.wall$over_represented_pvalue, method="BH") < cutoff, ] #apply FDR correction
+  write.csv(enriched.GO, outputFileFullPath,row.names = FALSE)
+  return(enriched.GO)
+}
+```
+
+
+```{r, message=FALSE}
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(plyr))
+GOoverlap = data.frame(category= character(), file=character(),term=character(),ontology=character())
+GENEoverlap = data.frame(Gene=character(), File=character())
+
+for (i in names(results_list)){                                                                          
+  print(i)
+  DE_list <- quick_output(results_list[[i]], i, filtered_cts)     
+
+  #Make list of genes which overlap
+  temp <- data.frame(Gene=rownames(DE_list), 
+                     File=rep(i, length(rownames(DE_list))), 
+                     Direction=ifelse(DE_list$log2FoldChange >0 , 'UP', 'DOWN'))
+  GENEoverlap <- merge(x=GENEoverlap, y=temp, all.x=TRUE, all.y=TRUE)
+  
+  #GO analysis
+  returned_object <- run_GOpathway_analysis(
+      DEgenes=rownames(DE_list), 
+      backgroundGenes=rownames(filtered_cts), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_", i, ".csv"))
+  cat(paste(nrow(returned_object), " :Number of GO terms\n\n"))
+  GOoverlap <- rbind(GOoverlap, returned_object[,c("term", "ontology")])
+}
+
+
+GOoutput <- GOoverlap %>% group_by(ontology,term) %>% dplyr::summarise(count=n()) %>% arrange(desc(count))
+write.csv(GOoutput, paste0(New_image_directory,"/Overlapping_GOpathways.csv"),row.names = FALSE)
+
+GENEoverlap <- ddply(GENEoverlap, .(Gene,Direction), dplyr::summarize, Count=length(unique(File)), Files=paste(unique(File),collapse=",")) %>% arrange(desc(Count))
+write.csv(GENEoverlap, paste0(New_image_directory,"/Overlapping_Gene.csv"),row.names = FALSE)
+```
+
+\newpage
+
+#[Summary so far]
+- Test 1: GFP+polyIC vs GFP
+  - 1680 DEX, 342 hcDEX
+  - 891 GO
+- Test 2: NS5+polyIC vs NS5
+  - 2457 DEX, 300 hcDEX
+  - 759 GO 
+
+#How does NS5 influnce the immune response in particular?
+```{r}
+New_image_directory = "/Users/AEveritt/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/"
+res.polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_GFP+polyIC_vs_GFP.csv", row.names = 1)
+dex.polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_GFP+polyIC_vs_GFP.csv", row.names = 1)
+res.polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_NS5+polyIC_vs_NS5.csv", row.names = 1)
+dex.polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_NS5+polyIC_vs_NS5.csv", row.names = 1)
+immune_response_genes <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/immunne_response_genes.txt",header=F)
+isg.67 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/raw_data/ISG_67.csv")
+isg.67 <- isg.67$Table.S11..DENV.induced.ISGs.for.ChIP.seq.analysis..Related.to.Figure.4.
+isg.135 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/raw_data/ISG_135.csv", header=F)
+isg.135 <- isg.135$V1
+
+length(intersect(rownames(res.polyic.gfp), immune_response_genes$V1))
+#1008 immune response genes in panel
+
+length(intersect(rownames(dex.polyic.gfp), immune_response_genes$V1)) #312 DEX genes in GFP+polyIC are immune response 
+length(intersect(rownames(dex.polyic.ns5), immune_response_genes$V1)) #274 DEX genes in NS5+polyIC are immune response 
+#length(intersect(same_direction, immune_response_genes$V1))
+
+overlap_in_both <- intersect(
+  intersect(rownames(dex.polyic.ns5), immune_response_genes$V1),
+  intersect(rownames(dex.polyic.gfp), immune_response_genes$V1)
+)
+length(overlap_in_both) #133 of the immune response genes above overlap each other
+
+#Okay, but lets just look that the immune response genes that are DE in both, but have a > 2 fold change in either
+up.immune.gfp<- dex.polyic.gfp[rownames(dex.polyic.gfp) %in% overlap_in_both & dex.polyic.gfp$log2FoldChange > 1,]
+up.immune.ns5<- dex.polyic.ns5[rownames(dex.polyic.ns5) %in% overlap_in_both & dex.polyic.ns5$log2FoldChange > 1,]
+up.immune.64 <- union(rownames(up.immune.gfp), rownames(up.immune.ns5))
+
+#Do any of these 61 overlap with the ChIP seq data?
+length(intersect(up.immune.64, isg.67)) #18 
+length(intersect(up.immune.64, isg.135)) #31
+```
+
+##Are the mean log2FC distributions different? Seems like a degree of expression here, not just being DE itself
+```{r}
+mean(res.polyic.gfp$log2FoldChange - res.polyic.ns5$log2FoldChange) #Across all genes 
+a <- res.polyic.gfp[rownames(res.polyic.gfp) %in% 
+                      union(rownames(dex.polyic.gfp), rownames(dex.polyic.ns5)),]
+b <- res.polyic.ns5[rownames(res.polyic.ns5) %in% 
+                      union(rownames(dex.polyic.gfp), rownames(dex.polyic.ns5)),]
+mean(a$log2FoldChange - b$log2FoldChange) #Across overlapping DE genes
+```
+
+```{r}
+#Build a table we can plot with to represent this graphically
+results <- merge(x=res.polyic.gfp[, c(2,5)], y=res.polyic.ns5[,c(2,5)], by="row.names", all=T)
+colnames(results) <- c("GeneID","Log2FC_GFP","padj_GFP","Log2FC_NS5","padj_NS5")
+results$sig <- "NEITHER"
+results[results$padj_GFP < 0.05 & !is.na(results$padj_GFP), ]$sig <- "GFP"
+results[results$padj_NS5 < 0.05 & !is.na(results$padj_NS5), ]$sig <- "NS5"
+results[results$padj_GFP < 0.05 & !is.na(results$padj_GFP) & 
+          results$padj_NS5 < 0.05 & !is.na(results$padj_NS5), ]$sig <- "BOTH"
+```
+
+##Boxplot to show the overall reduced upregulation in NS5+polyIC
+```{r}
+library(ggpubr)
+library(reshape)
+pt1 <- results[,c(2,4)]
+pt1$Set <- "All Genes\n (n=11364)"
+colnames(pt1) <- c("GFP+polyIC", "NS5+polyIC", "Set")
+
+pt2 <- results[results$sig == "BOTH",c(2,4)]
+pt2$Set <- "Overlapping DE Genes\n (n=648)"
+colnames(pt2) <- c("GFP+polyIC", "NS5+polyIC","Set")
+
+pt3 <- results[results$GeneID %in% up.immune.64, c(2,4)]
+pt3$Set <- "Upregulated Immune Response genes\n (n=64)"
+colnames(pt3) <- c("GFP+polyIC", "NS5+polyIC","Set")
+
+pt4 <- results[results$GeneID %in% intersect(up.immune.64, isg.67), c(2,4)]
+pt4$Set <- "Upregulated Immune Response genes\n that occur in ISG (n=18)"
+colnames(pt4) <- c("GFP+polyIC", "NS5+polyIC","Set")
+
+pt5 <- results[results$GeneID %in% isg.67,c(2,4)]
+pt5$Set <- "PAF1C-responsive ISGs\n (n=59)"
+colnames(pt5) <- c("GFP+polyIC", "NS5+polyIC", "Set")
+
+isg <- union(intersect(rownames(dex.polyic.gfp), isg.67),
+          intersect(rownames(dex.polyic.ns5), isg.67))
+pt6 <- results[results$GeneID %in% isg,c(2,4)]
+pt6$Set <- "DE PAF1C-responsive ISGs\n (n=45)"
+colnames(pt6) <- c("GFP+polyIC", "NS5+polyIC", "Set")
+
+to.plot <- rbind(melt(pt1), melt(pt2), melt(pt3), melt(pt4), melt(pt5), melt(pt6))
+
+to.plot$Set <- factor(to.plot$Set, levels=c("All Genes\n (n=11364)", 
+                                            "Overlapping DE Genes\n (n=648)", 
+                                            "PAF1C-responsive ISGs\n (n=59)", 
+                                            "DE PAF1C-responsive ISGs\n (n=45)", 
+                                            "Upregulated Immune Response genes\n (n=64)",
+                                            "Upregulated Immune Response genes\n that occur in ISG (n=18)"
+                                            ))
+p <- ggplot(to.plot, aes(x=Set, y=value, fill=variable)) + 
+  geom_boxplot(outlier.size = 0.5)+ ggtitle("Distribution of log2FC") +
+  xlab("")+ylab("log2FC")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=9)) + 
+  stat_compare_means(aes(group = variable),label = "p.format",label.y = 8)
+
+p
+```
+save(to.plot, file="~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/scripts/boxplot_df.Rdata")
+
+save(list = c("scatterplot_df", "de.genes.648", "isg.59", "isg.45", "immune.64", "immune.18"), file="~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/scripts/scatterplot_df.Rdata")
+
+#Scatterplots for individual sets of genes
+```{r}
+#to.plot2 <- results[results$GeneID %in% up.immune.64, ]
+to.plot2 <- results[results$GeneID %in% isg.67, ]
+
+p <- ggplot(to.plot2, aes(x=Log2FC_GFP, y=Log2FC_NS5))+ #, col=sig))+
+  geom_point() +
+  xlab("polyIC+GFP/GFP (log2 FC)")+
+  ylab("polyIC+NS5/NS5 (log2 FC)")+
+  geom_abline(intercept = 0, slope = 1, color="red", 
+                 linetype="dashed", size=1.5)+
+  #labs(color="Significant in:")+
+  NULL
+
+#p + ggtitle("Overlapping Upregulated Response Genes (n=64)") + ylim(c(-2,6)) + xlim(-2,6)
+p + ggtitle("PAF1C-responsive ISGs (n=59)") + ylim(c(-1,3)) + xlim(-1,3)
+```
+
+#Barplots for individual sets of genes
+```{r}
+to.plot3 <- results[results$GeneID %in% up.immune.64, ]
+a<- to.plot3[,c(1,2)]
+a$Treatment <- "GFP"
+colnames(a) = c("GeneID", "Log2FC", "Treatment")
+
+b<- to.plot3[,c(1,4)]
+b$Treatment <- "NS5"
+colnames(b) = c("GeneID", "Log2FC", "Treatment")
+res<- rbind(a,b)
+res$GeneID <- as.factor(res$GeneID)
+
+p <- ggplot(res, aes(x=GeneID, y=Log2FC, fill=Treatment))+
+  geom_bar(stat="identity", position=position_dodge())+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=7))+
+  ggtitle("Overlapping Upregulated Response Genes (n=64)") +
+  NULL
+``` 
+
+#Scatterplots directly comparing the two with coloring
+```{}
+#results <- results[results$GeneID %in% immune_response_genes$V1,]
+my.cor <- round(cor(results$Log2FC_GFP, results$Log2FC_NS5, method = "pearson"), digits=2)
+p4 = ggplot(results, aes(x=Log2FC_NS5, y=Log2FC_GFP, col=sig)) +
+  geom_point(aes(color = sig)) +
+  #ylim(c(-4,4))+
+  #xlim(0,25) +
+  xlab("polyIC+GFP/GFP (log2 FC)")+
+  ylab("polyIC+NS5/NS5 (log2 FC)")+
+  scale_colour_manual(values = c("red3","yellow","black","blue"), 
+                      name=paste("adj p<0.05)"), # \n(R=",my.cor,")"),
+                      labels=c("Both","GFP only","Neither","NS5 only")) +
+  theme(legend.justification=c(0,1), legend.position=c(0,1),
+        legend.background = element_rect(fill="transparent",size=0.5, linetype="solid", colour ="black")) +
+  #ggtitle("Immume Response Genes(n=1008)") +
+  NULL
+p4
+```
+
+
+#Okay, is there GO enrichment globably for upregulated genes?
+```{r}
+up.dex.gfp <- dex.polyic.gfp[dex.polyic.gfp$log2FoldChange >1,]
+up.dex.ns5 <- dex.polyic.ns5[dex.polyic.ns5$log2FoldChange >1,]
+
+GO.output <- run_GOpathway_analysis(
+      DEgenes=rownames(up.dex.gfp), 
+      backgroundGenes=rownames(res.polyic.gfp), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_gfp_up.csv"))
+#defense response, cytokine
+
+GO.output2 <- run_GOpathway_analysis(
+      DEgenes=rownames(up.dex.ns5), 
+      backgroundGenes=rownames(res.polyic.ns5), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_ns5_up.csv"))
+#still rna binding and macromolecular complex
+
+
+```
+
+
+
+******************************************************
+```{r}
+res.polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_GFP+polyIC_vs_GFP.csv", row.names = 1)
+res.polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_NS5+polyIC_vs_NS5.csv", row.names = 1)
+dex.polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_GFP+polyIC_vs_GFP.csv", row.names = 1)
+dex.polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_NS5+polyIC_vs_NS5.csv", row.names = 1)
+
+isg.67 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/raw_data/ISG_67.csv")
+isg.67 <- isg.67$Table.S11..DENV.induced.ISGs.for.ChIP.seq.analysis..Related.to.Figure.4.
+
+isg.135 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/raw_data/ISG_135.csv", header=F)
+isg.135 <- isg.135$V1
+
+length(intersect(rownames(res.polyic.gfp), isg.67))
+length(intersect(rownames(res.polyic.gfp), isg.135))
+
+length(intersect(rownames(dex.polyic.gfp), isg.67))
+length(intersect(rownames(dex.polyic.ns5), isg.67))
+
+isg <- setdiff(intersect(rownames(dex.polyic.gfp), isg.67),
+          intersect(rownames(dex.polyic.ns5), isg.67))
+
+results <- results[results$GeneID %in% isg,]
+a<- results[,c(1,2)]
+a$Treatment <- "GFP"
+colnames(a) = c("GeneID", "Log2FC", "Treatment")
+
+b<- results[,c(1,4)]
+b$Treatment <- "NS5"
+colnames(b) = c("GeneID", "Log2FC", "Treatment")
+res<- rbind(a,b)
+res$GeneID <- as.factor(res$GeneID)
+p <- ggplot(res, aes(x=GeneID, y=Log2FC, fill=Treatment))+
+  geom_bar(stat="identity", position=position_dodge())+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=7))+
+  ggtitle("PAF1C-responsive ISGs (n=12)") +
+  NULL
+```
+
+
+
+
+
+
+
+
+
+#Lets take a quick GO look at the different immune genes 
+```{r}
+New_image_directory = "/Users/AEveritt/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/"
+gfp.unique<- setdiff(intersect(rownames(dex.polyic.gfp), immune_response_genes$V1), overlap_in_both)
+ns5.unique<- setdiff(intersect(rownames(dex.polyic.ns5), immune_response_genes$V1), overlap_in_both)
+GO.output <- run_GOpathway_analysis(
+      DEgenes=gfp.unique, 
+      backgroundGenes=unique(immune_response_genes$V1), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_gfp_unique.csv"))
+
+GO.output2 <- run_GOpathway_analysis(
+      DEgenes=ns5.unique, 
+      backgroundGenes=unique(immune_response_genes$V1), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_ns5_unique.csv"))
+```
+
+#Lets try to plot a heatmap by log2FC
+```{r}
+library(heatmap3)
+
+my.log2df <- merge(x=res.polyic.gfp[, 2,drop=F], y=res.polyic.ns5[,2,drop=F], by="row.names", all=T)
+colnames(my.log2df) <- c("GeneID",
+                   "PolyIC treatment in GFP",
+                   "PolyIC treatment in NS5")
+rownames(my.log2df) = my.log2df$GeneID
+
+a<-my.log2df[my.log2df$GeneID %in% intersect(rownames(dex.polyic.gfp), immune_response_genes$V1), ]
+a<-my.log2df[my.log2df$GeneID %in% intersect(same_direction, immune_response_genes$V1), ]
+heatmap3(a[,2:4], 
+         scale= "row", cexCol = 0.8,margins=c(10,5),labRow = NA,
+         main="Immune Response Genes")
+```
+
+
+
+
+norm.counts <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/norm_counts.csv", row.names = 1)
+
+
+```{r}
+polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_GFP+polyIC_vs_GFP.csv")
+ns5_vs_gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_NS5_vs_GFP.csv")
+polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_NS5+polyIC_vs_NS5.csv")
+polyic.ns5_vs_gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/DEX_NS5+polyIC_vs_GFP+polyIC.csv")
+
+filtered_cts <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/count_matrix.csv", row.names = 1)
+```
+
+#First, I wanted to see how similar the polyIC treatment effect was in GFP and NS5 samples.
+```{r}
+length(polyic.gfp$X)
+length(polyic.ns5$X)
+
+length(intersect(polyic.gfp$X, polyic.ns5$X)) #intersect
+
+intersect_up <- intersect(polyic.gfp[polyic.gfp$log2FoldChange > 0,"X"], 
+          polyic.ns5[polyic.ns5$log2FoldChange > 0,"X"])
+intersect_down <- intersect(polyic.gfp[polyic.gfp$log2FoldChange < 0,"X"], 
+          polyic.ns5[polyic.ns5$log2FoldChange < 0,"X"])
+
+same_direction <- union(intersect_up, intersect_down)
+length(same_direction)
+
+#Is this significant
+#For hypergeometric
+#q= intersect
+#m= treatment 1 DE
+#n = all exp - treatment 1 DE
+#k = treatment 2 DE
+phyper(q= length(same_direction),
+       m = length(polyic.gfp$X),
+       n = nrow(filtered_cts)-length(polyic.gfp$X),
+       k = length(polyic.ns5$X),
+       lower.tail=FALSE
+)
+```
+
+#Are these 490 enriched for any certain pathways?
+```{r}
+GO.output <- run_GOpathway_analysis(
+      DEgenes=same_direction, 
+      backgroundGenes=rownames(filtered_cts), 
+      genomeBuild="hg19", geneIdentifier="geneSymbol",cutoff=0.05,
+      outputFileFullPath=paste0(New_image_directory, "/GO_overlap490.csv"))
+```
+
+#Okay, now how do these change in the NS5+polyIC vs GFP+polyIC
+```{r}
+length(polyic.ns5_vs_gfp$X)
+length(intersect(polyic.ns5_vs_gfp$X, same_direction))
+length(intersect(intersect_up, polyic.ns5_vs_gfp[polyic.ns5_vs_gfp$log2FoldChange > 0,"X"]))
+length(intersect(intersect_down, polyic.ns5_vs_gfp[polyic.ns5_vs_gfp$log2FoldChange < 0,"X"]))
+```
+
+#Heatmap to plot 1. Union of all DE genes 2. These 490 genes
+```{r}
+genes.490 = same_direction
+genes.union = union(union(polyic.gfp$X, polyic.ns5$X), polyic.ns5_vs_gfp$X)
+```
+
+```{r}
+library(heatmap3)
+res.polyic.gfp <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_GFP+polyIC_vs_GFP.csv", row.names = 1)
+res.polyic.ns5 <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_NS5+polyIC_vs_NS5.csv", row.names = 1)
+res.ns5IC.gfpIC <- read.csv("~/projects/AmpliSeq_Analysis/07_dengue_chip20.21/results/polyIC/results_NS5+polyIC_vs_GFP+polyIC.csv", row.names = 1)
+
+
+tmp <- merge(x=res.polyic.gfp[, 2,drop=F], y=res.polyic.ns5[,2,drop=F], by="row.names", all=T)
+my.log2df <- merge(x=res.ns5IC.gfpIC[, 2,drop=F], y=tmp, by.x="row.names", by.y="Row.names", all=T)
+colnames(my.log2df) <- c("GeneID",
+                   "NS5+polyIC_vs_GFP+polyIC",
+                   "PolyIC treatment in GFP",
+                   "PolyIC treatment in NS5")
+
+heatmap3(my.log2df[my.log2df$GeneID %in% genes.union, c(2:4)], 
+         scale= "row", cexCol = 0.8,margins=c(10,5),labRow = NA,
+         main="Union of DE genes")
+
+heatmap3(my.log2df[my.log2df$GeneID %in% genes.490, c(2:4)], 
+         scale= "row", cexCol = 0.8,margins=c(10,5),labRow = NA,
+         main="490 genes")
+```
+
+#Gene Ontology Plot by -log10(over represented pval)
+- TO ADD
+
+\newpage
+```{r}
+sessionInfo()
+```
+

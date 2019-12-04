@@ -1,0 +1,47 @@
+"ontology","term","count"
+"BP","cellular aromatic compound metabolic process",1
+"BP","cellular metabolic process",1
+"BP","cellular nitrogen compound biosynthetic process",1
+"BP","cellular nitrogen compound metabolic process",1
+"BP","cellular response to abiotic stimulus",1
+"BP","cellular response to environmental stimulus",1
+"BP","exit from host",1
+"BP","exit from host cell",1
+"BP","gene expression",1
+"BP","generation of precursor metabolites and energy",1
+"BP","heterocycle metabolic process",1
+"BP","interspecies interaction between organisms",1
+"BP","movement in environment of other organism involved in symbiotic interaction",1
+"BP","movement in host environment",1
+"BP","nitrogen compound metabolic process",1
+"BP","nucleobase-containing compound metabolic process",1
+"BP","organic cyclic compound metabolic process",1
+"BP","organonitrogen compound metabolic process",1
+"BP","positive regulation of cell death",1
+"BP","protein monoubiquitination",1
+"BP","purine nucleoside monophosphate metabolic process",1
+"BP","purine ribonucleoside monophosphate metabolic process",1
+"BP","regulation of apoptotic process",1
+"BP","regulation of cell death",1
+"BP","regulation of programmed cell death",1
+"BP","ribonucleoside monophosphate metabolic process",1
+"BP","symbiosis, encompassing mutualism through parasitism",1
+"BP","viral release from host cell",1
+"CC","cell",1
+"CC","cell part",1
+"CC","intracellular",1
+"CC","intracellular membrane-bounded organelle",1
+"CC","intracellular organelle",1
+"CC","intracellular organelle part",1
+"CC","intracellular part",1
+"CC","intracellular ribonucleoprotein complex",1
+"CC","macromolecular complex",1
+"CC","membrane-bounded organelle",1
+"CC","mitochondrial inner membrane",1
+"CC","nuclear part",1
+"CC","nucleus",1
+"CC","organelle",1
+"CC","organelle part",1
+"CC","ribonucleoprotein complex",1
+"MF","nucleic acid binding",1
+"MF","RNA binding",1

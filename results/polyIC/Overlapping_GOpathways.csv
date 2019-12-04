@@ -1,0 +1,1538 @@
+"ontology","term","count"
+"BP","activation of immune response",4
+"BP","activation of innate immune response",4
+"BP","anatomical structure development",4
+"BP","anatomical structure morphogenesis",4
+"BP","angiogenesis",4
+"BP","animal organ development",4
+"BP","antigen processing and presentation",4
+"BP","antigen processing and presentation of exogenous peptide antigen via MHC class I",4
+"BP","antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-dependent",4
+"BP","antigen processing and presentation of peptide antigen via MHC class I",4
+"BP","biological regulation",4
+"BP","biosynthetic process",4
+"BP","catabolic process",4
+"BP","cell activation",4
+"BP","cell activation involved in immune response",4
+"BP","cell communication",4
+"BP","cell death",4
+"BP","cell differentiation",4
+"BP","cell proliferation",4
+"BP","cell surface receptor signaling pathway",4
+"BP","cellular aromatic compound metabolic process",4
+"BP","cellular biosynthetic process",4
+"BP","cellular catabolic process",4
+"BP","cellular developmental process",4
+"BP","cellular ketone metabolic process",4
+"BP","cellular process",4
+"BP","cellular response to chemical stimulus",4
+"BP","cellular response to cytokine stimulus",4
+"BP","cellular response to decreased oxygen levels",4
+"BP","cellular response to hypoxia",4
+"BP","cellular response to organic substance",4
+"BP","cellular response to stimulus",4
+"BP","cellular response to stress",4
+"BP","cellular response to tumor necrosis factor",4
+"BP","cytokine-mediated signaling pathway",4
+"BP","defense response",4
+"BP","developmental process",4
+"BP","epithelium development",4
+"BP","gene expression",4
+"BP","granulocyte activation",4
+"BP","hematopoietic or lymphoid organ development",4
+"BP","hemopoiesis",4
+"BP","heterocycle metabolic process",4
+"BP","immune effector process",4
+"BP","immune response",4
+"BP","immune response-activating signal transduction",4
+"BP","immune system development",4
+"BP","immune system process",4
+"BP","innate immune response",4
+"BP","innate immune response-activating signal transduction",4
+"BP","interspecies interaction between organisms",4
+"BP","leukocyte activation",4
+"BP","leukocyte activation involved in immune response",4
+"BP","leukocyte degranulation",4
+"BP","leukocyte mediated immunity",4
+"BP","localization",4
+"BP","metabolic process",4
+"BP","multi-organism process",4
+"BP","multicellular organism development",4
+"BP","multicellular organismal process",4
+"BP","myeloid cell activation involved in immune response",4
+"BP","myeloid leukocyte activation",4
+"BP","myeloid leukocyte mediated immunity",4
+"BP","negative regulation of biological process",4
+"BP","negative regulation of catalytic activity",4
+"BP","negative regulation of cell communication",4
+"BP","negative regulation of cellular metabolic process",4
+"BP","negative regulation of cellular process",4
+"BP","negative regulation of cellular protein metabolic process",4
+"BP","negative regulation of gene expression",4
+"BP","negative regulation of macromolecule metabolic process",4
+"BP","negative regulation of metabolic process",4
+"BP","negative regulation of molecular function",4
+"BP","negative regulation of nitrogen compound metabolic process",4
+"BP","negative regulation of protein metabolic process",4
+"BP","negative regulation of protein modification by small protein conjugation or removal",4
+"BP","negative regulation of protein modification process",4
+"BP","negative regulation of protein ubiquitination",4
+"BP","negative regulation of response to stimulus",4
+"BP","negative regulation of signal transduction",4
+"BP","negative regulation of signaling",4
+"BP","negative regulation of transferase activity",4
+"BP","neutrophil activation",4
+"BP","neutrophil activation involved in immune response",4
+"BP","neutrophil degranulation",4
+"BP","neutrophil mediated immunity",4
+"BP","NIK/NF-kappaB signaling",4
+"BP","nitrogen compound metabolic process",4
+"BP","nucleic acid metabolic process",4
+"BP","nucleobase-containing compound metabolic process",4
+"BP","organic cyclic compound metabolic process",4
+"BP","organic substance biosynthetic process",4
+"BP","organic substance catabolic process",4
+"BP","organic substance metabolic process",4
+"BP","organonitrogen compound metabolic process",4
+"BP","positive regulation of biological process",4
+"BP","positive regulation of biosynthetic process",4
+"BP","positive regulation of catabolic process",4
+"BP","positive regulation of catalytic activity",4
+"BP","positive regulation of cell communication",4
+"BP","positive regulation of cell proliferation",4
+"BP","positive regulation of cellular biosynthetic process",4
+"BP","positive regulation of cellular catabolic process",4
+"BP","positive regulation of cellular component organization",4
+"BP","positive regulation of cellular metabolic process",4
+"BP","positive regulation of cellular process",4
+"BP","positive regulation of cellular protein metabolic process",4
+"BP","positive regulation of defense response",4
+"BP","positive regulation of gene expression",4
+"BP","positive regulation of immune response",4
+"BP","positive regulation of immune system process",4
+"BP","positive regulation of innate immune response",4
+"BP","positive regulation of macromolecule biosynthetic process",4
+"BP","positive regulation of macromolecule metabolic process",4
+"BP","positive regulation of metabolic process",4
+"BP","positive regulation of molecular function",4
+"BP","positive regulation of nitrogen compound metabolic process",4
+"BP","positive regulation of nucleobase-containing compound metabolic process",4
+"BP","positive regulation of protein metabolic process",4
+"BP","positive regulation of protein modification process",4
+"BP","positive regulation of proteolysis",4
+"BP","positive regulation of response to stimulus",4
+"BP","positive regulation of signal transduction",4
+"BP","positive regulation of signaling",4
+"BP","primary metabolic process",4
+"BP","regulated exocytosis",4
+"BP","regulation of anatomical structure morphogenesis",4
+"BP","regulation of biological process",4
+"BP","regulation of biological quality",4
+"BP","regulation of catabolic process",4
+"BP","regulation of catalytic activity",4
+"BP","regulation of cell differentiation",4
+"BP","regulation of cell proliferation",4
+"BP","regulation of cellular catabolic process",4
+"BP","regulation of cellular component organization",4
+"BP","regulation of cellular localization",4
+"BP","regulation of cellular metabolic process",4
+"BP","regulation of cellular process",4
+"BP","regulation of cellular protein metabolic process",4
+"BP","regulation of developmental process",4
+"BP","regulation of hemopoiesis",4
+"BP","regulation of immune system process",4
+"BP","regulation of innate immune response",4
+"BP","regulation of macromolecule metabolic process",4
+"BP","regulation of metabolic process",4
+"BP","regulation of molecular function",4
+"BP","regulation of mRNA catabolic process",4
+"BP","regulation of mRNA metabolic process",4
+"BP","regulation of multicellular organismal development",4
+"BP","regulation of multicellular organismal process",4
+"BP","regulation of nitrogen compound metabolic process",4
+"BP","regulation of primary metabolic process",4
+"BP","regulation of protein metabolic process",4
+"BP","regulation of protein modification process",4
+"BP","regulation of proteolysis",4
+"BP","regulation of response to stimulus",4
+"BP","regulation of response to stress",4
+"BP","regulation of signal transduction",4
+"BP","regulation of stem cell differentiation",4
+"BP","regulation of transferase activity",4
+"BP","regulation of viral life cycle",4
+"BP","response to abiotic stimulus",4
+"BP","response to chemical",4
+"BP","response to cytokine",4
+"BP","response to decreased oxygen levels",4
+"BP","response to endogenous stimulus",4
+"BP","response to hypoxia",4
+"BP","response to organic cyclic compound",4
+"BP","response to organic substance",4
+"BP","response to stimulus",4
+"BP","response to stress",4
+"BP","response to tumor necrosis factor",4
+"BP","signal transduction",4
+"BP","signaling",4
+"BP","symbiosis, encompassing mutualism through parasitism",4
+"BP","system development",4
+"BP","tissue development",4
+"BP","transcription from RNA polymerase II promoter",4
+"BP","tumor necrosis factor-mediated signaling pathway",4
+"BP","viral life cycle",4
+"BP","viral process",4
+"CC","cell-substrate adherens junction",4
+"CC","cell-substrate junction",4
+"CC","cytoplasmic vesicle lumen",4
+"CC","cytoplasmic vesicle part",4
+"CC","cytosol",4
+"CC","extracellular exosome",4
+"CC","extracellular matrix",4
+"CC","extracellular organelle",4
+"CC","extracellular region",4
+"CC","extracellular region part",4
+"CC","extracellular space",4
+"CC","extracellular vesicle",4
+"CC","ficolin-1-rich granule",4
+"CC","ficolin-1-rich granule lumen",4
+"CC","focal adhesion",4
+"CC","intracellular organelle lumen",4
+"CC","membrane-enclosed lumen",4
+"CC","myelin sheath",4
+"CC","nuclear lumen",4
+"CC","nuclear part",4
+"CC","nucleoplasm",4
+"CC","nucleus",4
+"CC","organelle lumen",4
+"CC","secretory granule",4
+"CC","secretory granule lumen",4
+"CC","secretory vesicle",4
+"CC","vesicle",4
+"CC","vesicle lumen",4
+"MF","binding",4
+"MF","heterocyclic compound binding",4
+"MF","molecular_function",4
+"MF","organic cyclic compound binding",4
+"MF","protein binding",4
+"MF","RNA binding",4
+"BP","antigen processing and presentation of peptide antigen",3
+"BP","apoptotic process",3
+"BP","aromatic compound biosynthetic process",3
+"BP","aromatic compound catabolic process",3
+"BP","biological_process",3
+"BP","blood vessel development",3
+"BP","blood vessel morphogenesis",3
+"BP","cardiovascular system development",3
+"BP","cell migration",3
+"BP","cell motility",3
+"BP","cellular component organization",3
+"BP","cellular component organization or biogenesis",3
+"BP","cellular macromolecular complex assembly",3
+"BP","cellular macromolecule biosynthetic process",3
+"BP","cellular macromolecule catabolic process",3
+"BP","cellular macromolecule metabolic process",3
+"BP","cellular metabolic process",3
+"BP","cellular nitrogen compound biosynthetic process",3
+"BP","cellular nitrogen compound metabolic process",3
+"BP","cellular response to heat",3
+"BP","cellular response to lipid",3
+"BP","cellular response to oxygen levels",3
+"BP","cellular response to type I interferon",3
+"BP","chaperone-mediated protein folding",3
+"BP","circulatory system development",3
+"BP","defense response to virus",3
+"BP","entry into cell of other organism involved in symbiotic interaction",3
+"BP","entry into host",3
+"BP","entry into host cell",3
+"BP","entry into other organism involved in symbiotic interaction",3
+"BP","epithelial cell differentiation",3
+"BP","establishment of localization",3
+"BP","establishment of protein localization to organelle",3
+"BP","exocytosis",3
+"BP","hematopoietic progenitor cell differentiation",3
+"BP","hematopoietic stem cell differentiation",3
+"BP","heterocycle biosynthetic process",3
+"BP","immune response-regulating signaling pathway",3
+"BP","interaction with host",3
+"BP","intracellular signal transduction",3
+"BP","localization of cell",3
+"BP","locomotion",3
+"BP","macromolecular complex assembly",3
+"BP","macromolecular complex subunit organization",3
+"BP","macromolecule catabolic process",3
+"BP","macromolecule metabolic process",3
+"BP","MAPK cascade",3
+"BP","morphogenesis of an epithelium",3
+"BP","mRNA metabolic process",3
+"BP","negative regulation of apoptotic process",3
+"BP","negative regulation of biosynthetic process",3
+"BP","negative regulation of cell death",3
+"BP","negative regulation of cellular biosynthetic process",3
+"BP","negative regulation of cellular macromolecule biosynthetic process",3
+"BP","negative regulation of endopeptidase activity",3
+"BP","negative regulation of extrinsic apoptotic signaling pathway",3
+"BP","negative regulation of macromolecule biosynthetic process",3
+"BP","negative regulation of multicellular organismal process",3
+"BP","negative regulation of nucleic acid-templated transcription",3
+"BP","negative regulation of nucleobase-containing compound metabolic process",3
+"BP","negative regulation of peptidase activity",3
+"BP","negative regulation of programmed cell death",3
+"BP","negative regulation of proteolysis",3
+"BP","negative regulation of RNA biosynthetic process",3
+"BP","negative regulation of RNA metabolic process",3
+"BP","negative regulation of transcription, DNA-templated",3
+"BP","negative regulation of ubiquitin-protein ligase activity involved in mitotic cell cycle",3
+"BP","negative regulation of ubiquitin-protein transferase activity",3
+"BP","negative regulation of viral genome replication",3
+"BP","nucleobase-containing compound biosynthetic process",3
+"BP","organic cyclic compound biosynthetic process",3
+"BP","organic cyclic compound catabolic process",3
+"BP","pattern recognition receptor signaling pathway",3
+"BP","positive regulation of cell adhesion",3
+"BP","positive regulation of cell migration",3
+"BP","positive regulation of cell motility",3
+"BP","positive regulation of cellular component movement",3
+"BP","positive regulation of cellular protein catabolic process",3
+"BP","positive regulation of chemotaxis",3
+"BP","positive regulation of developmental process",3
+"BP","positive regulation of locomotion",3
+"BP","positive regulation of multicellular organismal process",3
+"BP","positive regulation of proteolysis involved in cellular protein catabolic process",3
+"BP","positive regulation of RNA metabolic process",3
+"BP","positive regulation of transferase activity",3
+"BP","positive regulation of ubiquitin protein ligase activity",3
+"BP","posttranscriptional regulation of gene expression",3
+"BP","programmed cell death",3
+"BP","protein folding",3
+"BP","protein localization to organelle",3
+"BP","protein metabolic process",3
+"BP","protein phosphorylation",3
+"BP","protein stabilization",3
+"BP","proteolysis",3
+"BP","regulation of apoptotic process",3
+"BP","regulation of biosynthetic process",3
+"BP","regulation of cell communication",3
+"BP","regulation of cell cycle",3
+"BP","regulation of cell death",3
+"BP","regulation of cell migration",3
+"BP","regulation of cell motility",3
+"BP","regulation of cellular amino acid metabolic process",3
+"BP","regulation of cellular biosynthetic process",3
+"BP","regulation of cellular component movement",3
+"BP","regulation of cellular ketone metabolic process",3
+"BP","regulation of cellular macromolecule biosynthetic process",3
+"BP","regulation of cellular protein catabolic process",3
+"BP","regulation of cellular protein localization",3
+"BP","regulation of defense response",3
+"BP","regulation of DNA-templated transcription in response to stress",3
+"BP","regulation of extrinsic apoptotic signaling pathway",3
+"BP","regulation of gene expression",3
+"BP","regulation of hematopoietic progenitor cell differentiation",3
+"BP","regulation of hematopoietic stem cell differentiation",3
+"BP","regulation of immune response",3
+"BP","regulation of intracellular signal transduction",3
+"BP","regulation of locomotion",3
+"BP","regulation of macromolecule biosynthetic process",3
+"BP","regulation of mRNA stability",3
+"BP","regulation of nucleic acid-templated transcription",3
+"BP","regulation of nucleobase-containing compound metabolic process",3
+"BP","regulation of phospholipase activity",3
+"BP","regulation of programmed cell death",3
+"BP","regulation of protein catabolic process",3
+"BP","regulation of protein modification by small protein conjugation or removal",3
+"BP","regulation of protein ubiquitination",3
+"BP","regulation of proteolysis involved in cellular protein catabolic process",3
+"BP","regulation of RNA biosynthetic process",3
+"BP","regulation of RNA metabolic process",3
+"BP","regulation of signaling",3
+"BP","regulation of transcription from RNA polymerase II promoter",3
+"BP","regulation of transcription from RNA polymerase II promoter in response to hypoxia",3
+"BP","regulation of transcription from RNA polymerase II promoter in response to stress",3
+"BP","regulation of transcription, DNA-templated",3
+"BP","regulation of wound healing",3
+"BP","reproduction",3
+"BP","reproductive process",3
+"BP","response to biotic stimulus",3
+"BP","response to external biotic stimulus",3
+"BP","response to external stimulus",3
+"BP","response to heat",3
+"BP","response to hormone",3
+"BP","response to lipid",3
+"BP","response to other organism",3
+"BP","response to oxygen levels",3
+"BP","response to steroid hormone",3
+"BP","response to topologically incorrect protein",3
+"BP","response to type I interferon",3
+"BP","response to unfolded protein",3
+"BP","response to virus",3
+"BP","RNA metabolic process",3
+"BP","secretion",3
+"BP","secretion by cell",3
+"BP","signal transduction by protein phosphorylation",3
+"BP","stem cell differentiation",3
+"BP","tissue morphogenesis",3
+"BP","transport",3
+"BP","type I interferon signaling pathway",3
+"BP","vasculature development",3
+"BP","vesicle-mediated transport",3
+"BP","viral entry into host cell",3
+"CC","adherens junction",3
+"CC","anchoring junction",3
+"CC","blood microparticle",3
+"CC","cell junction",3
+"CC","cell surface",3
+"CC","chromosomal part",3
+"CC","chromosome",3
+"CC","cytoplasm",3
+"CC","cytoplasmic part",3
+"CC","cytoplasmic vesicle",3
+"CC","intracellular membrane-bounded organelle",3
+"CC","intracellular organelle",3
+"CC","intracellular organelle part",3
+"CC","intracellular vesicle",3
+"CC","membrane-bounded organelle",3
+"CC","organelle",3
+"CC","organelle part",3
+"CC","perinuclear region of cytoplasm",3
+"CC","proteasome core complex",3
+"MF","carbohydrate derivative binding",3
+"MF","cell adhesion molecule binding",3
+"MF","enzyme binding",3
+"MF","identical protein binding",3
+"MF","kinase binding",3
+"MF","macromolecular complex binding",3
+"MF","nucleic acid binding",3
+"MF","protein binding involved in protein folding",3
+"MF","protein complex binding",3
+"MF","receptor binding",3
+"MF","threonine-type endopeptidase activity",3
+"MF","threonine-type peptidase activity",3
+"MF","transcription factor binding",3
+"MF","unfolded protein binding",3
+"BP","'de novo' protein folding",2
+"BP","adaptive immune response",2
+"BP","adherens junction organization",2
+"BP","aging",2
+"BP","amide biosynthetic process",2
+"BP","amine metabolic process",2
+"BP","anaphase-promoting complex-dependent catabolic process",2
+"BP","anatomical structure formation involved in morphogenesis",2
+"BP","animal organ morphogenesis",2
+"BP","antigen processing and presentation of exogenous antigen",2
+"BP","antigen processing and presentation of exogenous peptide antigen",2
+"BP","antigen receptor-mediated signaling pathway",2
+"BP","apoptotic signaling pathway",2
+"BP","biological adhesion",2
+"BP","carboxylic acid metabolic process",2
+"BP","cell adhesion",2
+"BP","cell cycle",2
+"BP","cell cycle G1/S phase transition",2
+"BP","cell cycle G2/M phase transition",2
+"BP","cell cycle phase transition",2
+"BP","cell cycle process",2
+"BP","cell development",2
+"BP","cell-cell adhesion",2
+"BP","cell-matrix adhesion",2
+"BP","cell-substrate adhesion",2
+"BP","cellular aldehyde metabolic process",2
+"BP","cellular amide metabolic process",2
+"BP","cellular amine metabolic process",2
+"BP","cellular component assembly",2
+"BP","cellular component biogenesis",2
+"BP","cellular component disassembly",2
+"BP","cellular localization",2
+"BP","cellular macromolecule localization",2
+"BP","cellular nitrogen compound catabolic process",2
+"BP","cellular protein catabolic process",2
+"BP","cellular protein complex disassembly",2
+"BP","cellular protein localization",2
+"BP","cellular protein metabolic process",2
+"BP","cellular response to endogenous stimulus",2
+"BP","cellular response to external stimulus",2
+"BP","cellular response to extracellular stimulus",2
+"BP","cellular response to interferon-gamma",2
+"BP","cellular response to lipopolysaccharide",2
+"BP","cellular response to molecule of bacterial origin",2
+"BP","cellular response to oxidative stress",2
+"BP","chaperone-mediated protein complex assembly",2
+"BP","chromatin assembly",2
+"BP","chromatin assembly or disassembly",2
+"BP","chromatin silencing",2
+"BP","chromosome organization",2
+"BP","cytokine production",2
+"BP","defense response to other organism",2
+"BP","DNA conformation change",2
+"BP","DNA metabolic process",2
+"BP","DNA packaging",2
+"BP","DNA-templated transcription, termination",2
+"BP","endothelial cell apoptotic process",2
+"BP","epidermis development",2
+"BP","epithelial cell apoptotic process",2
+"BP","establishment of localization in cell",2
+"BP","establishment of planar polarity",2
+"BP","establishment of RNA localization",2
+"BP","establishment of tissue polarity",2
+"BP","extracellular matrix disassembly",2
+"BP","extracellular matrix organization",2
+"BP","extracellular structure organization",2
+"BP","extrinsic apoptotic signaling pathway",2
+"BP","Fc receptor signaling pathway",2
+"BP","Fc-epsilon receptor signaling pathway",2
+"BP","female pregnancy",2
+"BP","G1/S transition of mitotic cell cycle",2
+"BP","G2/M transition of mitotic cell cycle",2
+"BP","gland development",2
+"BP","gland morphogenesis",2
+"BP","heterocycle catabolic process",2
+"BP","homeostasis of number of cells",2
+"BP","I-kappaB kinase/NF-kappaB signaling",2
+"BP","immune response-activating cell surface receptor signaling pathway",2
+"BP","immune response-regulating cell surface receptor signaling pathway",2
+"BP","inflammatory response",2
+"BP","innate immune response activating cell surface receptor signaling pathway",2
+"BP","interferon-gamma-mediated signaling pathway",2
+"BP","intracellular protein transport",2
+"BP","intracellular transport",2
+"BP","intrinsic apoptotic signaling pathway",2
+"BP","keratinocyte differentiation",2
+"BP","lipid localization",2
+"BP","macromolecular complex disassembly",2
+"BP","macromolecule biosynthetic process",2
+"BP","macromolecule localization",2
+"BP","mammary gland epithelium development",2
+"BP","MHC class I biosynthetic process",2
+"BP","mitochondrial gene expression",2
+"BP","mitochondrial translation",2
+"BP","mitochondrial translational elongation",2
+"BP","mitochondrial translational termination",2
+"BP","mitotic cell cycle",2
+"BP","mitotic cell cycle phase transition",2
+"BP","mitotic cell cycle process",2
+"BP","modification-dependent macromolecule catabolic process",2
+"BP","modification-dependent protein catabolic process",2
+"BP","morphogenesis of a polarized epithelium",2
+"BP","movement of cell or subcellular component",2
+"BP","mRNA 3'-end processing",2
+"BP","mRNA catabolic process",2
+"BP","mRNA export from nucleus",2
+"BP","mRNA processing",2
+"BP","mRNA splicing, via spliceosome",2
+"BP","mRNA transport",2
+"BP","mRNA-containing ribonucleoprotein complex export from nucleus",2
+"BP","multi-multicellular organism process",2
+"BP","multicellular organismal macromolecule metabolic process",2
+"BP","muscle cell differentiation",2
+"BP","myeloid cell differentiation",2
+"BP","ncRNA metabolic process",2
+"BP","ncRNA processing",2
+"BP","negative regulation of apoptotic signaling pathway",2
+"BP","negative regulation of canonical Wnt signaling pathway",2
+"BP","negative regulation of cell cycle",2
+"BP","negative regulation of cell cycle G2/M phase transition",2
+"BP","negative regulation of cell cycle phase transition",2
+"BP","negative regulation of cell cycle process",2
+"BP","negative regulation of cell differentiation",2
+"BP","negative regulation of cell proliferation",2
+"BP","negative regulation of cysteine-type endopeptidase activity",2
+"BP","negative regulation of cytokine production",2
+"BP","negative regulation of developmental process",2
+"BP","negative regulation of endothelial cell apoptotic process",2
+"BP","negative regulation of epithelial cell apoptotic process",2
+"BP","negative regulation of extrinsic apoptotic signaling pathway via death domain receptors",2
+"BP","negative regulation of G2/M transition of mitotic cell cycle",2
+"BP","negative regulation of gene expression, epigenetic",2
+"BP","negative regulation of hydrolase activity",2
+"BP","negative regulation of immune response",2
+"BP","negative regulation of innate immune response",2
+"BP","negative regulation of locomotion",2
+"BP","negative regulation of mitotic cell cycle",2
+"BP","negative regulation of mitotic cell cycle phase transition",2
+"BP","negative regulation of multi-organism process",2
+"BP","negative regulation of transcription from RNA polymerase II promoter",2
+"BP","negative regulation of type I interferon production",2
+"BP","negative regulation of ubiquitin protein ligase activity",2
+"BP","negative regulation of viral entry into host cell",2
+"BP","negative regulation of viral life cycle",2
+"BP","negative regulation of viral process",2
+"BP","negative regulation of Wnt signaling pathway",2
+"BP","nuclear export",2
+"BP","nuclear transport",2
+"BP","nuclear-transcribed mRNA catabolic process",2
+"BP","nucleic acid transport",2
+"BP","nucleic acid-templated transcription",2
+"BP","nucleobase-containing compound catabolic process",2
+"BP","nucleobase-containing compound transport",2
+"BP","nucleocytoplasmic transport",2
+"BP","nucleosome assembly",2
+"BP","nucleosome organization",2
+"BP","organelle organization",2
+"BP","organic acid metabolic process",2
+"BP","organonitrogen compound biosynthetic process",2
+"BP","organonitrogen compound catabolic process",2
+"BP","ossification",2
+"BP","oxoacid metabolic process",2
+"BP","peptide biosynthetic process",2
+"BP","peptide metabolic process",2
+"BP","phosphate-containing compound metabolic process",2
+"BP","phosphorus metabolic process",2
+"BP","phosphorylation",2
+"BP","positive regulation of angiogenesis",2
+"BP","positive regulation of apoptotic process",2
+"BP","positive regulation of blood circulation",2
+"BP","positive regulation of canonical Wnt signaling pathway",2
+"BP","positive regulation of cell death",2
+"BP","positive regulation of cell differentiation",2
+"BP","positive regulation of cellular protein localization",2
+"BP","positive regulation of cytokine production",2
+"BP","positive regulation of defense response to virus by host",2
+"BP","positive regulation of DNA binding transcription factor activity",2
+"BP","positive regulation of DNA biosynthetic process",2
+"BP","positive regulation of establishment of protein localization to telomere",2
+"BP","positive regulation of I-kappaB kinase/NF-kappaB signaling",2
+"BP","positive regulation of inflammatory response",2
+"BP","positive regulation of intracellular signal transduction",2
+"BP","positive regulation of leukocyte chemotaxis",2
+"BP","positive regulation of leukocyte migration",2
+"BP","positive regulation of NF-kappaB transcription factor activity",2
+"BP","positive regulation of nucleic acid-templated transcription",2
+"BP","positive regulation of organelle organization",2
+"BP","positive regulation of peptidyl-tyrosine phosphorylation",2
+"BP","positive regulation of phosphate metabolic process",2
+"BP","positive regulation of phosphorus metabolic process",2
+"BP","positive regulation of programmed cell death",2
+"BP","positive regulation of protein catabolic process",2
+"BP","positive regulation of protein localization to Cajal body",2
+"BP","positive regulation of protein localization to chromosome, telomeric region",2
+"BP","positive regulation of protein modification by small protein conjugation or removal",2
+"BP","positive regulation of protein phosphorylation",2
+"BP","positive regulation of protein ubiquitination",2
+"BP","positive regulation of protein ubiquitination involved in ubiquitin-dependent protein catabolic process",2
+"BP","positive regulation of response to cytokine stimulus",2
+"BP","positive regulation of response to external stimulus",2
+"BP","positive regulation of RNA biosynthetic process",2
+"BP","positive regulation of telomerase RNA localization to Cajal body",2
+"BP","positive regulation of transcription from RNA polymerase II promoter",2
+"BP","positive regulation of transcription, DNA-templated",2
+"BP","positive regulation of ubiquitin-protein ligase activity involved in regulation of mitotic cell cycle transition",2
+"BP","positive regulation of ubiquitin-protein transferase activity",2
+"BP","positive regulation of vasculature development",2
+"BP","positive regulation of Wnt signaling pathway",2
+"BP","post-translational protein modification",2
+"BP","protein activation cascade",2
+"BP","protein catabolic process",2
+"BP","protein complex assembly",2
+"BP","protein complex biogenesis",2
+"BP","protein complex disassembly",2
+"BP","protein complex subunit organization",2
+"BP","protein deubiquitination",2
+"BP","protein export from nucleus",2
+"BP","protein localization",2
+"BP","protein localization to Cajal body",2
+"BP","protein localization to nuclear body",2
+"BP","protein localization to nucleoplasm",2
+"BP","protein localization to nucleus",2
+"BP","protein modification by small protein removal",2
+"BP","protein processing",2
+"BP","protein refolding",2
+"BP","protein targeting",2
+"BP","protein ubiquitination involved in ubiquitin-dependent protein catabolic process",2
+"BP","protein-DNA complex assembly",2
+"BP","proteolysis involved in cellular protein catabolic process",2
+"BP","regulation of angiogenesis",2
+"BP","regulation of apoptotic signaling pathway",2
+"BP","regulation of cell adhesion",2
+"BP","regulation of cell cycle G2/M phase transition",2
+"BP","regulation of cell cycle phase transition",2
+"BP","regulation of cell cycle process",2
+"BP","regulation of cell development",2
+"BP","regulation of cell growth",2
+"BP","regulation of cell-cell adhesion",2
+"BP","regulation of cellular amide metabolic process",2
+"BP","regulation of cellular amine metabolic process",2
+"BP","regulation of cysteine-type endopeptidase activity",2
+"BP","regulation of cytokine production",2
+"BP","regulation of cytokine-mediated signaling pathway",2
+"BP","regulation of defense response to virus",2
+"BP","regulation of defense response to virus by host",2
+"BP","regulation of DNA binding transcription factor activity",2
+"BP","regulation of DNA biosynthetic process",2
+"BP","regulation of endopeptidase activity",2
+"BP","regulation of endothelial cell apoptotic process",2
+"BP","regulation of epithelial cell apoptotic process",2
+"BP","regulation of establishment of planar polarity",2
+"BP","regulation of establishment of protein localization",2
+"BP","regulation of establishment of protein localization to chromosome",2
+"BP","regulation of establishment of protein localization to telomere",2
+"BP","regulation of extrinsic apoptotic signaling pathway via death domain receptors",2
+"BP","regulation of G2/M transition of mitotic cell cycle",2
+"BP","regulation of growth",2
+"BP","regulation of I-kappaB kinase/NF-kappaB signaling",2
+"BP","regulation of immune effector process",2
+"BP","regulation of inflammatory response",2
+"BP","regulation of interleukin-1 production",2
+"BP","regulation of localization",2
+"BP","regulation of macrophage apoptotic process",2
+"BP","regulation of MHC class I biosynthetic process",2
+"BP","regulation of mitotic cell cycle",2
+"BP","regulation of mitotic cell cycle phase transition",2
+"BP","regulation of morphogenesis of an epithelium",2
+"BP","regulation of mRNA processing",2
+"BP","regulation of mRNA splicing, via spliceosome",2
+"BP","regulation of multi-organism process",2
+"BP","regulation of nucleotide-binding oligomerization domain containing signaling pathway",2
+"BP","regulation of organ morphogenesis",2
+"BP","regulation of organelle organization",2
+"BP","regulation of peptidase activity",2
+"BP","regulation of peptide transport",2
+"BP","regulation of phosphate metabolic process",2
+"BP","regulation of phosphorus metabolic process",2
+"BP","regulation of phosphorylation",2
+"BP","regulation of proteasomal protein catabolic process",2
+"BP","regulation of protein localization",2
+"BP","regulation of protein localization to Cajal body",2
+"BP","regulation of protein localization to chromosome, telomeric region",2
+"BP","regulation of protein maturation",2
+"BP","regulation of protein phosphorylation",2
+"BP","regulation of protein processing",2
+"BP","regulation of protein ubiquitination involved in ubiquitin-dependent protein catabolic process",2
+"BP","regulation of receptor activity",2
+"BP","regulation of response to biotic stimulus",2
+"BP","regulation of response to cytokine stimulus",2
+"BP","regulation of response to external stimulus",2
+"BP","regulation of response to wounding",2
+"BP","regulation of RNA splicing",2
+"BP","regulation of RNA stability",2
+"BP","regulation of symbiosis, encompassing mutualism through parasitism",2
+"BP","regulation of telomerase RNA localization to Cajal body",2
+"BP","regulation of translation",2
+"BP","regulation of transport",2
+"BP","regulation of type I interferon production",2
+"BP","regulation of ubiquitin protein ligase activity",2
+"BP","regulation of ubiquitin-protein ligase activity involved in mitotic cell cycle",2
+"BP","regulation of ubiquitin-protein transferase activity",2
+"BP","regulation of vasculature development",2
+"BP","regulation of viral entry into host cell",2
+"BP","regulation of viral genome replication",2
+"BP","regulation of viral process",2
+"BP","regulation of Wnt signaling pathway",2
+"BP","response to bacterium",2
+"BP","response to corticosteroid",2
+"BP","response to endoplasmic reticulum stress",2
+"BP","response to extracellular stimulus",2
+"BP","response to glucocorticoid",2
+"BP","response to inorganic substance",2
+"BP","response to interferon-alpha",2
+"BP","response to interferon-beta",2
+"BP","response to interferon-gamma",2
+"BP","response to lipopolysaccharide",2
+"BP","response to molecule of bacterial origin",2
+"BP","response to nitrogen compound",2
+"BP","response to nutrient levels",2
+"BP","response to organonitrogen compound",2
+"BP","response to organophosphorus",2
+"BP","response to oxidative stress",2
+"BP","response to oxygen-containing compound",2
+"BP","response to reactive oxygen species",2
+"BP","response to temperature stimulus",2
+"BP","response to wounding",2
+"BP","ribonucleoprotein complex assembly",2
+"BP","ribonucleoprotein complex biogenesis",2
+"BP","ribonucleoprotein complex export from nucleus",2
+"BP","ribonucleoprotein complex localization",2
+"BP","ribonucleoprotein complex subunit organization",2
+"BP","ribosomal large subunit biogenesis",2
+"BP","ribosomal small subunit export from nucleus",2
+"BP","ribosomal subunit export from nucleus",2
+"BP","ribosome biogenesis",2
+"BP","ribosome localization",2
+"BP","RNA 3'-end processing",2
+"BP","RNA biosynthetic process",2
+"BP","RNA catabolic process",2
+"BP","RNA export from nucleus",2
+"BP","RNA localization",2
+"BP","RNA localization to Cajal body",2
+"BP","RNA localization to nucleus",2
+"BP","RNA processing",2
+"BP","RNA secondary structure unwinding",2
+"BP","RNA splicing",2
+"BP","RNA splicing, via transesterification reactions",2
+"BP","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",2
+"BP","RNA transport",2
+"BP","rRNA metabolic process",2
+"BP","rRNA processing",2
+"BP","rRNA-containing ribonucleoprotein complex export from nucleus",2
+"BP","SCF-dependent proteasomal ubiquitin-dependent protein catabolic process",2
+"BP","sister chromatid segregation",2
+"BP","stimulatory C-type lectin receptor signaling pathway",2
+"BP","T cell receptor signaling pathway",2
+"BP","telomerase RNA localization",2
+"BP","telomerase RNA localization to Cajal body",2
+"BP","termination of RNA polymerase II transcription",2
+"BP","toll-like receptor signaling pathway",2
+"BP","transcription, DNA-templated",2
+"BP","translation",2
+"BP","translational elongation",2
+"BP","translational initiation",2
+"BP","translational termination",2
+"BP","type I interferon production",2
+"BP","ubiquitin-dependent protein catabolic process",2
+"BP","viral genome replication",2
+"BP","Wnt signaling pathway, planar cell polarity pathway",2
+"BP","wound healing",2
+"BP","zymogen activation",2
+"CC","catalytic complex",2
+"CC","catalytic step 2 spliceosome",2
+"CC","cell",2
+"CC","cell part",2
+"CC","cellular_component",2
+"CC","chaperone complex",2
+"CC","chaperonin-containing T-complex",2
+"CC","chromatin",2
+"CC","cortical actin cytoskeleton",2
+"CC","cortical cytoskeleton",2
+"CC","endomembrane system",2
+"CC","endopeptidase complex",2
+"CC","endoplasmic reticulum lumen",2
+"CC","envelope",2
+"CC","external side of plasma membrane",2
+"CC","extracellular matrix component",2
+"CC","intracellular",2
+"CC","intracellular non-membrane-bounded organelle",2
+"CC","intracellular part",2
+"CC","intracellular ribonucleoprotein complex",2
+"CC","large ribosomal subunit",2
+"CC","macromolecular complex",2
+"CC","membrane microdomain",2
+"CC","membrane raft",2
+"CC","membrane region",2
+"CC","mitochondrial envelope",2
+"CC","mitochondrial inner membrane",2
+"CC","mitochondrial membrane",2
+"CC","mitochondrial part",2
+"CC","mitochondrial small ribosomal subunit",2
+"CC","non-membrane-bounded organelle",2
+"CC","nuclear body",2
+"CC","nucleolus",2
+"CC","nucleoplasm part",2
+"CC","organellar small ribosomal subunit",2
+"CC","organelle envelope",2
+"CC","peptidase complex",2
+"CC","preribosome",2
+"CC","proteasome accessory complex",2
+"CC","proteasome complex",2
+"CC","proteasome core complex, beta-subunit complex",2
+"CC","proteasome regulatory particle",2
+"CC","proteasome regulatory particle, lid subcomplex",2
+"CC","protein complex",2
+"CC","proteinaceous extracellular matrix",2
+"CC","ribonucleoprotein complex",2
+"CC","ribosomal subunit",2
+"CC","ribosome",2
+"CC","small ribosomal subunit",2
+"CC","spliceosomal complex",2
+"CC","tertiary granule lumen",2
+"CC","U2 snRNP",2
+"CC","zona pellucida receptor complex",2
+"MF","adenyl nucleotide binding",2
+"MF","adenyl ribonucleotide binding",2
+"MF","alditol:NADP+ 1-oxidoreductase activity",2
+"MF","ATP binding",2
+"MF","ATP-dependent helicase activity",2
+"MF","ATP-dependent RNA helicase activity",2
+"MF","ATPase activity",2
+"MF","ATPase activity, coupled",2
+"MF","cadherin binding",2
+"MF","chemokine receptor binding",2
+"MF","core promoter binding",2
+"MF","cytokine activity",2
+"MF","double-stranded RNA binding",2
+"MF","endopeptidase regulator activity",2
+"MF","extracellular matrix binding",2
+"MF","G-protein coupled receptor binding",2
+"MF","growth factor binding",2
+"MF","heat shock protein binding",2
+"MF","hormone receptor binding",2
+"MF","laminin binding",2
+"MF","ligand-dependent nuclear receptor transcription coactivator activity",2
+"MF","mRNA binding",2
+"MF","nuclear hormone receptor binding",2
+"MF","nucleoside phosphate binding",2
+"MF","nucleotide binding",2
+"MF","proteoglycan binding",2
+"MF","purine NTP-dependent helicase activity",2
+"MF","purine nucleotide binding",2
+"MF","purine ribonucleoside triphosphate binding",2
+"MF","purine ribonucleotide binding",2
+"MF","receptor ligand activity",2
+"MF","receptor regulator activity",2
+"MF","ribonucleotide binding",2
+"MF","RNA helicase activity",2
+"MF","RNA-dependent ATPase activity",2
+"MF","rRNA binding",2
+"MF","serine-type endopeptidase inhibitor activity",2
+"MF","structural constituent of ribosome",2
+"MF","structural molecule activity",2
+"MF","transcription coactivator activity",2
+"MF","transcription cofactor activity",2
+"MF","transcription factor activity, protein binding",2
+"MF","transcription factor activity, RNA polymerase II core promoter proximal region sequence-specific binding",2
+"MF","transcription factor activity, transcription factor binding",2
+"MF","translation factor activity, RNA binding",2
+"MF","translation initiation factor activity",2
+"MF","ubiquitin protein ligase binding",2
+"MF","ubiquitin-like protein ligase binding",2
+"BP","'de novo' posttranslational protein folding",1
+"BP","acute inflammatory response",1
+"BP","acute inflammatory response to antigenic stimulus",1
+"BP","adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains",1
+"BP","adherens junction assembly",1
+"BP","alpha-beta T cell differentiation",1
+"BP","ameboidal-type cell migration",1
+"BP","amide transport",1
+"BP","aminoglycoside antibiotic metabolic process",1
+"BP","androgen receptor signaling pathway",1
+"BP","antigen processing and presentation of endogenous antigen",1
+"BP","antigen processing and presentation of endogenous peptide antigen",1
+"BP","antigen processing and presentation of endogenous peptide antigen via MHC class I",1
+"BP","B cell activation",1
+"BP","B cell differentiation",1
+"BP","blood coagulation",1
+"BP","blood vessel endothelial cell migration",1
+"BP","C21-steroid hormone metabolic process",1
+"BP","calcium-independent cell-matrix adhesion",1
+"BP","canonical Wnt signaling pathway",1
+"BP","cell adhesion mediated by integrin",1
+"BP","cell aging",1
+"BP","cell chemotaxis",1
+"BP","cell death in response to oxidative stress",1
+"BP","cell division",1
+"BP","cell growth",1
+"BP","cell junction assembly",1
+"BP","cell junction organization",1
+"BP","cell migration involved in sprouting angiogenesis",1
+"BP","cell recognition",1
+"BP","cell surface receptor signaling pathway involved in cell-cell signaling",1
+"BP","cell-cell adhesion mediated by integrin",1
+"BP","cell-cell junction organization",1
+"BP","cell-cell signaling",1
+"BP","cell-cell signaling by wnt",1
+"BP","cell-substrate adherens junction assembly",1
+"BP","cell-substrate junction assembly",1
+"BP","cellular amino acid metabolic process",1
+"BP","cellular detoxification",1
+"BP","cellular hormone metabolic process",1
+"BP","cellular oxidant detoxification",1
+"BP","cellular protein complex assembly",1
+"BP","cellular response to acid chemical",1
+"BP","cellular response to biotic stimulus",1
+"BP","cellular response to corticosteroid stimulus",1
+"BP","cellular response to epidermal growth factor stimulus",1
+"BP","cellular response to estradiol stimulus",1
+"BP","cellular response to exogenous dsRNA",1
+"BP","cellular response to growth factor stimulus",1
+"BP","cellular response to hydrogen peroxide",1
+"BP","cellular response to interferon-beta",1
+"BP","cellular response to interleukin-4",1
+"BP","cellular response to interleukin-6",1
+"BP","cellular response to iron ion",1
+"BP","cellular response to jasmonic acid stimulus",1
+"BP","cellular response to mechanical stimulus",1
+"BP","cellular response to nutrient levels",1
+"BP","cellular response to organic cyclic compound",1
+"BP","cellular response to oxygen-containing compound",1
+"BP","cellular response to reactive oxygen species",1
+"BP","cellular response to steroid hormone stimulus",1
+"BP","cellular response to topologically incorrect protein",1
+"BP","cellular response to toxic substance",1
+"BP","cellular response to transforming growth factor beta stimulus",1
+"BP","cellular response to unfolded protein",1
+"BP","cellular response to virus",1
+"BP","cellular senescence",1
+"BP","chaperone mediated protein folding requiring cofactor",1
+"BP","chemical homeostasis",1
+"BP","chemokine-mediated signaling pathway",1
+"BP","chemotaxis",1
+"BP","cholesterol biosynthetic process",1
+"BP","chromatin organization",1
+"BP","chromatin silencing at rDNA",1
+"BP","circadian regulation of gene expression",1
+"BP","circadian rhythm",1
+"BP","coagulation",1
+"BP","collagen catabolic process",1
+"BP","collagen metabolic process",1
+"BP","complement activation",1
+"BP","complement activation, classical pathway",1
+"BP","cornification",1
+"BP","cotranslational protein targeting to membrane",1
+"BP","cyclic nucleotide metabolic process",1
+"BP","cytokine production involved in inflammatory response",1
+"BP","cytosol to ER transport",1
+"BP","daunorubicin metabolic process",1
+"BP","detection of virus",1
+"BP","detoxification",1
+"BP","developmental process involved in reproduction",1
+"BP","digestion",1
+"BP","DNA biosynthetic process",1
+"BP","DNA damage response, detection of DNA damage",1
+"BP","DNA replication",1
+"BP","DNA unwinding involved in DNA replication",1
+"BP","DNA-templated transcription, initiation",1
+"BP","doxorubicin metabolic process",1
+"BP","embryonic placenta morphogenesis",1
+"BP","endoplasmic reticulum unfolded protein response",1
+"BP","endothelial cell migration",1
+"BP","energy derivation by oxidation of organic compounds",1
+"BP","enzyme linked receptor protein signaling pathway",1
+"BP","epidermal cell differentiation",1
+"BP","epithelial cell migration",1
+"BP","epithelial cell proliferation",1
+"BP","epithelium migration",1
+"BP","ERK1 and ERK2 cascade",1
+"BP","erythrocyte differentiation",1
+"BP","erythrocyte homeostasis",1
+"BP","establishment of protein localization",1
+"BP","establishment of protein localization to endoplasmic reticulum",1
+"BP","establishment of protein localization to membrane",1
+"BP","establishment of protein localization to telomere",1
+"BP","exit from host",1
+"BP","exit from host cell",1
+"BP","extrinsic apoptotic signaling pathway via death domain receptors",1
+"BP","fatty acid derivative biosynthetic process",1
+"BP","fatty acid derivative metabolic process",1
+"BP","Fc receptor mediated stimulatory signaling pathway",1
+"BP","Fc-gamma receptor signaling pathway",1
+"BP","Fc-gamma receptor signaling pathway involved in phagocytosis",1
+"BP","fibroblast proliferation",1
+"BP","focal adhesion assembly",1
+"BP","G-protein coupled receptor signaling pathway",1
+"BP","gene silencing",1
+"BP","glial cell migration",1
+"BP","gliogenesis",1
+"BP","glycoside metabolic process",1
+"BP","granulocyte chemotaxis",1
+"BP","growth",1
+"BP","hemidesmosome assembly",1
+"BP","hemostasis",1
+"BP","homeostatic process",1
+"BP","homotypic cell-cell adhesion",1
+"BP","hormone biosynthetic process",1
+"BP","hormone metabolic process",1
+"BP","hormone-mediated signaling pathway",1
+"BP","humoral immune response",1
+"BP","hydrogen peroxide catabolic process",1
+"BP","hydrogen peroxide metabolic process",1
+"BP","icosanoid biosynthetic process",1
+"BP","immune response-regulating cell surface receptor signaling pathway involved in phagocytosis",1
+"BP","inflammatory response to antigenic stimulus",1
+"BP","interferon-beta production",1
+"BP","interleukin-1 production",1
+"BP","interleukin-8 production",1
+"BP","intra-Golgi vesicle-mediated transport",1
+"BP","intracellular receptor signaling pathway",1
+"BP","intracellular steroid hormone receptor signaling pathway",1
+"BP","intrinsic apoptotic signaling pathway in response to endoplasmic reticulum stress",1
+"BP","intrinsic apoptotic signaling pathway in response to oxidative stress",1
+"BP","ISG15-protein conjugation",1
+"BP","keratinization",1
+"BP","lamellipodium organization",1
+"BP","leukocyte cell-cell adhesion",1
+"BP","leukocyte chemotaxis",1
+"BP","leukocyte differentiation",1
+"BP","leukocyte migration",1
+"BP","lipid storage",1
+"BP","lipid transport",1
+"BP","lipopolysaccharide-mediated signaling pathway",1
+"BP","liver regeneration",1
+"BP","lung development",1
+"BP","lymphocyte activation",1
+"BP","lymphocyte migration",1
+"BP","macrophage apoptotic process",1
+"BP","maintenance of location",1
+"BP","mammary gland duct morphogenesis",1
+"BP","maternal placenta development",1
+"BP","maternal process involved in female pregnancy",1
+"BP","membrane disassembly",1
+"BP","mitotic nuclear division",1
+"BP","mitotic nuclear envelope disassembly",1
+"BP","mitotic sister chromatid segregation",1
+"BP","mitotic spindle organization",1
+"BP","monocyte chemotaxis",1
+"BP","monocyte differentiation",1
+"BP","mononuclear cell differentiation",1
+"BP","morphogenesis of a branching epithelium",1
+"BP","morphogenesis of a branching structure",1
+"BP","movement in environment of other organism involved in symbiotic interaction",1
+"BP","movement in host environment",1
+"BP","multi-organism reproductive process",1
+"BP","multicellular organism metabolic process",1
+"BP","multicellular organismal catabolic process",1
+"BP","muscle cell proliferation",1
+"BP","myeloid cell homeostasis",1
+"BP","myeloid leukocyte differentiation",1
+"BP","myoblast differentiation",1
+"BP","negative regulation by host of viral genome replication",1
+"BP","negative regulation by host of viral process",1
+"BP","negative regulation of blood vessel diameter",1
+"BP","negative regulation of catabolic process",1
+"BP","negative regulation of cell migration",1
+"BP","negative regulation of cellular amide metabolic process",1
+"BP","negative regulation of cellular component movement",1
+"BP","negative regulation of cellular response to oxidative stress",1
+"BP","negative regulation of coagulation",1
+"BP","negative regulation of cysteine-type endopeptidase activity involved in apoptotic process",1
+"BP","negative regulation of defense response",1
+"BP","negative regulation of DNA binding transcription factor activity",1
+"BP","negative regulation of ERK1 and ERK2 cascade",1
+"BP","negative regulation of establishment of protein localization",1
+"BP","negative regulation of growth",1
+"BP","negative regulation of hemopoiesis",1
+"BP","negative regulation of immune system process",1
+"BP","negative regulation of intracellular signal transduction",1
+"BP","negative regulation of kinase activity",1
+"BP","negative regulation of MAPK cascade",1
+"BP","negative regulation of megakaryocyte differentiation",1
+"BP","negative regulation of myeloid cell differentiation",1
+"BP","negative regulation of NF-kappaB transcription factor activity",1
+"BP","negative regulation of nucleotide metabolic process",1
+"BP","negative regulation of oxidative stress-induced cell death",1
+"BP","negative regulation of oxidative stress-induced intrinsic apoptotic signaling pathway",1
+"BP","negative regulation of phosphate metabolic process",1
+"BP","negative regulation of phosphorus metabolic process",1
+"BP","negative regulation of phosphorylation",1
+"BP","negative regulation of protein catabolic process",1
+"BP","negative regulation of protein phosphorylation",1
+"BP","negative regulation of protein transport",1
+"BP","negative regulation of purine nucleotide metabolic process",1
+"BP","negative regulation of response to external stimulus",1
+"BP","negative regulation of response to wounding",1
+"BP","negative regulation of smooth muscle cell proliferation",1
+"BP","negative regulation of stem cell differentiation",1
+"BP","negative regulation of toll-like receptor signaling pathway",1
+"BP","negative regulation of transcription from RNA polymerase II promoter in response to stress",1
+"BP","negative regulation of transport",1
+"BP","negative regulation of viral release from host cell",1
+"BP","nervous system development",1
+"BP","neurogenesis",1
+"BP","neutrophil chemotaxis",1
+"BP","nitrogen compound transport",1
+"BP","non-canonical Wnt signaling pathway",1
+"BP","norepinephrine metabolic process",1
+"BP","nuclear chromosome segregation",1
+"BP","nuclear envelope disassembly",1
+"BP","nuclear import",1
+"BP","nuclear-transcribed mRNA catabolic process, nonsense-mediated decay",1
+"BP","nucleotide-excision repair",1
+"BP","nucleus organization",1
+"BP","organic substance transport",1
+"BP","oxidation-reduction process",1
+"BP","peptide catabolic process",1
+"BP","peptide transport",1
+"BP","platelet aggregation",1
+"BP","platelet degranulation",1
+"BP","platelet-derived growth factor receptor-beta signaling pathway",1
+"BP","polyketide metabolic process",1
+"BP","positive regulation of acute inflammatory response",1
+"BP","positive regulation of adaptive immune response",1
+"BP","positive regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains",1
+"BP","positive regulation of adherens junction organization",1
+"BP","positive regulation of apoptotic signaling pathway",1
+"BP","positive regulation of blood vessel endothelial cell migration",1
+"BP","positive regulation of cell activation",1
+"BP","positive regulation of cell cycle",1
+"BP","positive regulation of cell migration involved in sprouting angiogenesis",1
+"BP","positive regulation of cell-cell adhesion",1
+"BP","positive regulation of cell-substrate adhesion",1
+"BP","positive regulation of chromatin binding",1
+"BP","positive regulation of chromosome organization",1
+"BP","positive regulation of cyclin-dependent protein kinase activity",1
+"BP","positive regulation of cyclin-dependent protein serine/threonine kinase activity",1
+"BP","positive regulation of cytokine biosynthetic process",1
+"BP","positive regulation of cytokine-mediated signaling pathway",1
+"BP","positive regulation of DNA metabolic process",1
+"BP","positive regulation of DNA-templated transcription, initiation",1
+"BP","positive regulation of endothelial cell migration",1
+"BP","positive regulation of epithelial cell apoptotic process",1
+"BP","positive regulation of epithelial cell migration",1
+"BP","positive regulation of epithelial cell proliferation",1
+"BP","positive regulation of extrinsic apoptotic signaling pathway",1
+"BP","positive regulation of gene expression, epigenetic",1
+"BP","positive regulation of granulocyte chemotaxis",1
+"BP","positive regulation of immune effector process",1
+"BP","positive regulation of kinase activity",1
+"BP","positive regulation of leukocyte activation",1
+"BP","positive regulation of leukocyte cell-cell adhesion",1
+"BP","positive regulation of leukocyte proliferation",1
+"BP","positive regulation of lymphocyte activation",1
+"BP","positive regulation of lymphocyte migration",1
+"BP","positive regulation of lymphocyte proliferation",1
+"BP","positive regulation of MAPK cascade",1
+"BP","positive regulation of MHC class I biosynthetic process",1
+"BP","positive regulation of mitochondrial ATP synthesis coupled electron transport",1
+"BP","positive regulation of mononuclear cell proliferation",1
+"BP","positive regulation of neutrophil chemotaxis",1
+"BP","positive regulation of neutrophil migration",1
+"BP","positive regulation of NF-kappaB import into nucleus",1
+"BP","positive regulation of phospholipase activity",1
+"BP","positive regulation of phosphorylation",1
+"BP","positive regulation of protein kinase activity",1
+"BP","positive regulation of protein localization to nucleus",1
+"BP","positive regulation of protein processing in phagocytic vesicle",1
+"BP","positive regulation of protein tyrosine kinase activity",1
+"BP","positive regulation of RNA polymerase II transcriptional preinitiation complex assembly",1
+"BP","positive regulation of RNA splicing",1
+"BP","positive regulation of sprouting angiogenesis",1
+"BP","positive regulation of substrate adhesion-dependent cell spreading",1
+"BP","positive regulation of supramolecular fiber organization",1
+"BP","positive regulation of telomere maintenance",1
+"BP","positive regulation of telomere maintenance via telomerase",1
+"BP","positive regulation of telomere maintenance via telomere lengthening",1
+"BP","positive regulation of transcription initiation from RNA polymerase II promoter",1
+"BP","positive regulation of transport",1
+"BP","positive regulation of vasculogenesis",1
+"BP","progesterone metabolic process",1
+"BP","proteasomal protein catabolic process",1
+"BP","proteasome assembly",1
+"BP","proteasome-mediated ubiquitin-dependent protein catabolic process",1
+"BP","protein import",1
+"BP","protein K11-linked ubiquitination",1
+"BP","protein kinase B signaling",1
+"BP","protein localization to endoplasmic reticulum",1
+"BP","protein localization to membrane",1
+"BP","protein maturation",1
+"BP","protein modification by small protein conjugation or removal",1
+"BP","protein polyubiquitination",1
+"BP","protein processing in phagocytic vesicle",1
+"BP","protein targeting to ER",1
+"BP","protein targeting to membrane",1
+"BP","protein transport",1
+"BP","protein-DNA complex subunit organization",1
+"BP","regulation of actin filament-based process",1
+"BP","regulation of acute inflammatory response",1
+"BP","regulation of adaptive immune response",1
+"BP","regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains",1
+"BP","regulation of anatomical structure size",1
+"BP","regulation of blood coagulation",1
+"BP","regulation of blood vessel endothelial cell migration",1
+"BP","regulation of blood vessel size",1
+"BP","regulation of body fluid levels",1
+"BP","regulation of canonical Wnt signaling pathway",1
+"BP","regulation of cell activation",1
+"BP","regulation of cell migration involved in sprouting angiogenesis",1
+"BP","regulation of cell-substrate adhesion",1
+"BP","regulation of cellular component biogenesis",1
+"BP","regulation of cellular response to growth factor stimulus",1
+"BP","regulation of cellular response to heat",1
+"BP","regulation of cellular response to stress",1
+"BP","regulation of chemokine biosynthetic process",1
+"BP","regulation of chemokine-mediated signaling pathway",1
+"BP","regulation of chemotaxis",1
+"BP","regulation of chromosome organization",1
+"BP","regulation of chronic inflammatory response",1
+"BP","regulation of coagulation",1
+"BP","regulation of complement activation",1
+"BP","regulation of cytokine production involved in immune response",1
+"BP","regulation of DNA metabolic process",1
+"BP","regulation of DNA-dependent DNA replication initiation",1
+"BP","regulation of endothelial cell migration",1
+"BP","regulation of epithelial cell migration",1
+"BP","regulation of ERK1 and ERK2 cascade",1
+"BP","regulation of erythrocyte differentiation",1
+"BP","regulation of gene expression, epigenetic",1
+"BP","regulation of gene silencing",1
+"BP","regulation of granulocyte chemotaxis",1
+"BP","regulation of hemostasis",1
+"BP","regulation of hormone levels",1
+"BP","regulation of humoral immune response",1
+"BP","regulation of hydrolase activity",1
+"BP","regulation of inclusion body assembly",1
+"BP","regulation of interferon-beta production",1
+"BP","regulation of interferon-gamma production",1
+"BP","regulation of interferon-gamma-mediated signaling pathway",1
+"BP","regulation of interleukin-1 beta production",1
+"BP","regulation of interleukin-8 production",1
+"BP","regulation of kinase activity",1
+"BP","regulation of leukocyte activation",1
+"BP","regulation of leukocyte apoptotic process",1
+"BP","regulation of leukocyte cell-cell adhesion",1
+"BP","regulation of leukocyte chemotaxis",1
+"BP","regulation of leukocyte migration",1
+"BP","regulation of leukocyte proliferation",1
+"BP","regulation of lipase activity",1
+"BP","regulation of lipid storage",1
+"BP","regulation of lymphocyte activation",1
+"BP","regulation of lymphocyte migration",1
+"BP","regulation of MAPK cascade",1
+"BP","regulation of mitochondrial ATP synthesis coupled electron transport",1
+"BP","regulation of mitotic spindle organization",1
+"BP","regulation of mononuclear cell proliferation",1
+"BP","regulation of myeloid cell differentiation",1
+"BP","regulation of nervous system development",1
+"BP","regulation of neurogenesis",1
+"BP","regulation of nucleotide-binding oligomerization domain containing 2 signaling pathway",1
+"BP","regulation of oxidative stress-induced intrinsic apoptotic signaling pathway",1
+"BP","regulation of peptidyl-tyrosine phosphorylation",1
+"BP","regulation of proteasomal ubiquitin-dependent protein catabolic process",1
+"BP","regulation of protein activation cascade",1
+"BP","regulation of protein complex assembly",1
+"BP","regulation of protein kinase activity",1
+"BP","regulation of protein kinase B signaling",1
+"BP","regulation of protein localization to nucleus",1
+"BP","regulation of protein processing in phagocytic vesicle",1
+"BP","regulation of protein transport",1
+"BP","regulation of response to endoplasmic reticulum stress",1
+"BP","regulation of response to interferon-gamma",1
+"BP","regulation of RNA polymerase II transcriptional preinitiation complex assembly",1
+"BP","regulation of smooth muscle cell proliferation",1
+"BP","regulation of spindle organization",1
+"BP","regulation of sprouting angiogenesis",1
+"BP","regulation of substrate adhesion-dependent cell spreading",1
+"BP","regulation of supramolecular fiber organization",1
+"BP","regulation of T cell activation",1
+"BP","regulation of T cell apoptotic process",1
+"BP","regulation of toll-like receptor signaling pathway",1
+"BP","regulation of transcription from RNA polymerase II promoter in response to oxidative stress",1
+"BP","regulation of transcription initiation from RNA polymerase II promoter",1
+"BP","regulation of translational initiation",1
+"BP","regulation of tube size",1
+"BP","regulation of type I interferon-mediated signaling pathway",1
+"BP","regulation of vasculogenesis",1
+"BP","regulation of vasoconstriction",1
+"BP","reproductive structure development",1
+"BP","reproductive system development",1
+"BP","response to acid chemical",1
+"BP","response to cadmium ion",1
+"BP","response to cAMP",1
+"BP","response to drug",1
+"BP","response to estradiol",1
+"BP","response to growth factor",1
+"BP","response to hydrogen peroxide",1
+"BP","response to interleukin-1",1
+"BP","response to interleukin-4",1
+"BP","response to interleukin-6",1
+"BP","response to jasmonic acid",1
+"BP","response to mechanical stimulus",1
+"BP","response to metal ion",1
+"BP","response to nutrient",1
+"BP","response to peptide",1
+"BP","response to starvation",1
+"BP","response to toxic substance",1
+"BP","response to transforming growth factor beta",1
+"BP","rhythmic process",1
+"BP","ribosomal large subunit assembly",1
+"BP","ribosomal large subunit export from nucleus",1
+"BP","ribosome assembly",1
+"BP","salivary gland development",1
+"BP","secondary alcohol biosynthetic process",1
+"BP","secondary metabolic process",1
+"BP","skin development",1
+"BP","small molecule biosynthetic process",1
+"BP","small molecule metabolic process",1
+"BP","smooth muscle cell proliferation",1
+"BP","spliceosomal complex assembly",1
+"BP","spliceosomal snRNP assembly",1
+"BP","sprouting angiogenesis",1
+"BP","SRP-dependent cotranslational protein targeting to membrane",1
+"BP","steroid biosynthetic process",1
+"BP","steroid hormone mediated signaling pathway",1
+"BP","steroid metabolic process",1
+"BP","sterol biosynthetic process",1
+"BP","stress-activated MAPK cascade",1
+"BP","substrate adhesion-dependent cell spreading",1
+"BP","system process",1
+"BP","T cell activation",1
+"BP","T cell differentiation",1
+"BP","T cell migration",1
+"BP","taxis",1
+"BP","telomere organization",1
+"BP","tissue migration",1
+"BP","tissue remodeling",1
+"BP","toxin transport",1
+"BP","transcription initiation from RNA polymerase II promoter",1
+"BP","transcription-coupled nucleotide-excision repair",1
+"BP","transmembrane receptor protein tyrosine kinase signaling pathway",1
+"BP","transmembrane transport",1
+"BP","tumor necrosis factor superfamily cytokine production",1
+"BP","unsaturated fatty acid biosynthetic process",1
+"BP","vascular process in circulatory system",1
+"BP","vasoconstriction",1
+"BP","ventricular cardiac muscle cell development",1
+"BP","vesicle fusion with endoplasmic reticulum-Golgi intermediate compartment (ERGIC) membrane",1
+"BP","viral gene expression",1
+"BP","viral release from host cell",1
+"BP","viral transcription",1
+"BP","viral translation",1
+"BP","virion assembly",1
+"BP","Wnt signaling pathway",1
+"BP","xenobiotic transport",1
+"CC","actin cap",1
+"CC","actin cytoskeleton",1
+"CC","actin-based cell projection",1
+"CC","actomyosin",1
+"CC","azurophil granule",1
+"CC","azurophil granule lumen",1
+"CC","basement membrane",1
+"CC","basolateral plasma membrane",1
+"CC","Cajal body",1
+"CC","cell cortex",1
+"CC","cell cortex part",1
+"CC","cell leading edge",1
+"CC","cell periphery",1
+"CC","cell projection membrane",1
+"CC","cell-cell adherens junction",1
+"CC","cell-cell contact zone",1
+"CC","cell-cell junction",1
+"CC","chromosomal region",1
+"CC","chromosome, telomeric region",1
+"CC","COP9 signalosome",1
+"CC","cyclin-dependent protein kinase holoenzyme complex",1
+"CC","cytoplasmic ribonucleoprotein granule",1
+"CC","cytosolic large ribosomal subunit",1
+"CC","cytosolic part",1
+"CC","cytosolic proteasome complex",1
+"CC","cytosolic ribosome",1
+"CC","DNA packaging complex",1
+"CC","endoplasmic reticulum",1
+"CC","endoplasmic reticulum part",1
+"CC","endosome lumen",1
+"CC","eukaryotic translation initiation factor 3 complex",1
+"CC","fascia adherens",1
+"CC","filopodium",1
+"CC","filopodium membrane",1
+"CC","hemidesmosome",1
+"CC","inner mitochondrial membrane protein complex",1
+"CC","integral component of endoplasmic reticulum membrane",1
+"CC","integrin complex",1
+"CC","intercalated disc",1
+"CC","intrinsic component of endoplasmic reticulum membrane",1
+"CC","invadopodium",1
+"CC","lamellipodium",1
+"CC","lysosomal lumen",1
+"CC","lysosome",1
+"CC","lytic vacuole",1
+"CC","melanosome",1
+"CC","membrane",1
+"CC","methylosome",1
+"CC","methyltransferase complex",1
+"CC","MHC class I peptide loading complex",1
+"CC","microvillus membrane",1
+"CC","mitochondrial large ribosomal subunit",1
+"CC","mitochondrial ribosome",1
+"CC","mitochondrion",1
+"CC","nuclear chromatin",1
+"CC","nuclear chromosome",1
+"CC","nuclear chromosome part",1
+"CC","nuclear nucleosome",1
+"CC","nuclear origin of replication recognition complex",1
+"CC","nuclear periphery",1
+"CC","nuclear proteasome complex",1
+"CC","nuclear speck",1
+"CC","nucleosome",1
+"CC","organellar large ribosomal subunit",1
+"CC","organellar ribosome",1
+"CC","organelle inner membrane",1
+"CC","organelle outer membrane",1
+"CC","origin recognition complex",1
+"CC","pICln-Sm protein complex",1
+"CC","pigment granule",1
+"CC","plasma membrane",1
+"CC","plasma membrane protein complex",1
+"CC","plasma membrane region",1
+"CC","polysome",1
+"CC","primary lysosome",1
+"CC","proteasome core complex, alpha-subunit complex",1
+"CC","proteasome regulatory particle, base subcomplex",1
+"CC","protein complex involved in cell adhesion",1
+"CC","protein-DNA complex",1
+"CC","ribonucleoprotein granule",1
+"CC","side of membrane",1
+"CC","SMN-Sm protein complex",1
+"CC","spermatoproteasome complex",1
+"CC","tertiary granule",1
+"CC","U1 snRNP",1
+"CC","U12-type spliceosomal complex",1
+"CC","U4 snRNP",1
+"CC","vacuolar lumen",1
+"CC","vacuolar part",1
+"CC","vacuole",1
+"CC","whole membrane",1
+"MF","2'-5'-oligoadenylate synthetase activity",1
+"MF","actin binding",1
+"MF","alcohol dehydrogenase (NADP+) activity",1
+"MF","aldo-keto reductase (NADP) activity",1
+"MF","amide binding",1
+"MF","anion binding",1
+"MF","antioxidant activity",1
+"MF","C3HC4-type RING finger domain binding",1
+"MF","calcium ion binding",1
+"MF","calcium-dependent phospholipid binding",1
+"MF","chemokine activity",1
+"MF","chemokine binding",1
+"MF","chromatin binding",1
+"MF","collagen binding",1
+"MF","complement binding",1
+"MF","core promoter sequence-specific DNA binding",1
+"MF","CXCR chemokine receptor binding",1
+"MF","cyclin-dependent protein serine/threonine kinase regulator activity",1
+"MF","cytokine binding",1
+"MF","DNA replication origin binding",1
+"MF","DNA-dependent ATPase activity",1
+"MF","double-stranded DNA binding",1
+"MF","endopeptidase inhibitor activity",1
+"MF","enzyme inhibitor activity",1
+"MF","fibronectin binding",1
+"MF","glutathione peroxidase activity",1
+"MF","glycosaminoglycan binding",1
+"MF","growth factor activity",1
+"MF","helicase activity",1
+"MF","heparan sulfate proteoglycan binding",1
+"MF","heparin binding",1
+"MF","hijacked molecular function",1
+"MF","histone acetyltransferase binding",1
+"MF","hydrolase activity, acting on acid anhydrides",1
+"MF","hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides",1
+"MF","indanol dehydrogenase activity",1
+"MF","insulin-like growth factor binding",1
+"MF","insulin-like growth factor-activated receptor activity",1
+"MF","integrin binding",1
+"MF","ketosteroid monooxygenase activity",1
+"MF","ligand-dependent nuclear receptor binding",1
+"MF","macromolecule transmembrane transporter activity",1
+"MF","MHC class II protein complex binding",1
+"MF","MHC protein complex binding",1
+"MF","molecular function regulator",1
+"MF","monosaccharide binding",1
+"MF","nitric-oxide synthase regulator activity",1
+"MF","Notch binding",1
+"MF","nucleoside-triphosphatase activity",1
+"MF","oxidoreductase activity",1
+"MF","oxidoreductase activity, acting on CH-OH group of donors",1
+"MF","oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen",1
+"MF","oxidoreductase activity, acting on paired donors, with oxidation of a pair of donors resulting in the reduction of molecular oxygen to two molecules of water",1
+"MF","oxidoreductase activity, acting on peroxide as acceptor",1
+"MF","oxidoreductase activity, acting on single donors with incorporation of molecular oxygen",1
+"MF","oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of two atoms of oxygen",1
+"MF","oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor",1
+"MF","peptidase inhibitor activity",1
+"MF","peptidase regulator activity",1
+"MF","peroxidase activity",1
+"MF","phenanthrene 9,10-monooxygenase activity",1
+"MF","protease binding",1
+"MF","proteasome-activating ATPase activity",1
+"MF","protein dimerization activity",1
+"MF","protein heterodimerization activity",1
+"MF","protein homodimerization activity",1
+"MF","protein kinase binding",1
+"MF","protein transmembrane transporter activity",1
+"MF","pyrophosphatase activity",1
+"MF","retinal dehydrogenase activity",1
+"MF","sequence-specific double-stranded DNA binding",1
+"MF","small molecule binding",1
+"MF","TBP-class protein binding",1
+"MF","trans-1,2-dihydrobenzene-1,2-diol dehydrogenase activity",1
+"MF","transcription corepressor activity",1
+"MF","transcription regulatory region sequence-specific DNA binding",1
+"MF","transcriptional activator activity, RNA polymerase II core promoter proximal region sequence-specific binding",1
+"MF","transferase activity, transferring pentosyl groups",1
+"MF","U1 snRNP binding",1
+"MF","vinculin binding",1
+"MF","virus receptor activity",1
+"MF","xenobiotic transmembrane transporter activity",1
